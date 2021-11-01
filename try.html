@@ -36,18 +36,18 @@
 
         section {
             background-color: white;
-            height: 100vh;
+            /* height: 100vh; */
         }
 
         section::before {
             content: "";
             width: 100%;
-            height: 1000px;
+            height: 100vh;
             background: #232323;
             transform: skewY(-15deg);
             display: block;
             position: absolute;
-            top: -400px;
+            top: -300px;
             left: 0;
         }
 
@@ -57,6 +57,12 @@
 
         .box {
             border-radius: 25px;
+        }
+
+        .bgwhite {
+            height: 100vh;
+            background: white;
+            /* align-items: stretch; */
         }
     </style>
 </head>
@@ -95,14 +101,14 @@
                     </div> -->
                     <div class="row">
                         <div class="col m-5 text-right">
-                            <!-- <a href=""> -->
-                            <button type="button" class="btn btn-dark box">เพื่อนๆของ React</button>
-                            <!-- </a> -->
+                            <a href="#friend">
+                                <button type="button" class="btn btn-dark box">เพื่อนๆของ React</button>
+                            </a>
                         </div>
                     </div>
                 </div>
                 <div class="col-4">
-                    <br><br>
+                    <br><br><br><br>
                     <div class="row">
                         <div>
                             <img class="circle"
@@ -232,10 +238,10 @@
         </div>
         <br><br><br id=""><br><br>
         <div class="row">
-            <div class="col-5">
+            <div class="col-4">
                 <img src="..." alt="สงสัย" width="100%">
             </div>
-            <div class="col-7">
+            <div class="col-8">
                 <div>
                     <h4 style="display: inline;">
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -246,24 +252,93 @@
                         ซึ่งแต่ละส่วนสามารถแยกการทำงานออกจากกันได้อย่างอิสระ และทำให้สามารถนำชิ้นส่วน UI
                         เหล่านั้นไปใช้ซ้ำได้อีก หรือจะพูดว่าเราใช้ React เพื่อทำให้เราสามารถสร้าง<h2
                             style="display: inline;">"ภาพ(view)"</h2>
-                    </h4>
+                    </h4><br><br><br>
+                    <h4>&nbsp;&nbsp;&nbsp;&nbsp;จากแต่ก่อนเวลาเราจะเขียนหน้าตาของเว็บ เราก็จะทำผ่าน HTML เช่น</h4>
+                    <img src="https://cdn.discordapp.com/attachments/904730719618744370/904730856835407932/Screenshot_2021-11-01_195002.png"
+                        alt="้html เดิม" class="box"><br><br>
+                </div>
+            </div>
+            <div class="col-12 mt-3">
+                <h4>&nbsp;&nbsp;&nbsp;&nbsp;แต่ใน React การจะสร้างหน้าตาของเว็บขึ้นมาได้นั้น มันมาจากสิ่งที่เรียกว่า
+                    Component ให้นึกภาพว่า Component เป็น block ส่วนย่อยของเว็บเราที่จะสร้างออกมา
+                    โดยเราจะเขียนโค้ดภาษา JavaScript เพื่ออธิบายหน้าตา (อาจรวมถึงพฤติกรรม) ของ block นั้นๆ
+                    แทนที่เราจะเขียนด้วย HTML จากรูปข้างบนเมื่อเขียนด้วย React จะได้
+                </h4><br>
+                <div style="display: flex;">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img
+                        src="https://cdn.discordapp.com/attachments/904730719618744370/904730809435586581/Screenshot_2021-11-01_195023.png"
+                        alt="react" class="box">
+                    <p><br>&nbsp;&nbsp;&nbsp;&nbsp;ซึ่ง ReactDOM.render() เป็นฟังก์ชันที่ตัว React จะทำการ render HTML
+                        ที่เขียนมา โดยมีจุดที่จะ render อยู่ที่ DOM ที่มี id เป็น root จากตัวอย่างนี้</p>
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col-5 ">
+                    <div class="card box">
+                        <div class="card-header text-center">
+                            ถ้าเรามี HTML
+                        </div>
+                        <img src="https://cdn.discordapp.com/attachments/904730719618744370/904751742128910406/Screenshot_2021-11-01_221949.png"
+                            alt="้html code">
+                    </div>
+                </div>
+                <div class="col-1 d-flex align-items-center m-0">
+                    <img src="https://static.vecteezy.com/system/resources/previews/001/186/944/non_2x/blue-arrow-button-png.png"
+                        alt="" width="100%">
+                </div>
+                <div class="col-5">
+                    <div class="card box">
+                        <div class="card-header text-center">
+                            ตัว React จะทำการ render หน้า HTML ทั้งหมดเป็น
+                        </div>
+                        <img src="https://cdn.discordapp.com/attachments/904730719618744370/904751742128910406/Screenshot_2021-11-01_221949.png"
+                            alt="้html code">
+                    </div>
+                </div>
+            </div>
+            <!-- เช็คคำอีกที ข้างล่าง -->
+            <div class="col-12"><br><br>
+                <h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;นั่นคือเราจะไม่เขียน HTML ใน HTML กันอีกต่อไป เราจะใช้ React
+                    เขียนอยู่ในรูปแบบ JavaScript แทน ซึ่งทำให้มีภาษาใหม่เกิดขึ้นมา (ก็ไม่เชิงภาษาใหม่) นั่นคือ JSX
+                    ที่ทำให้เรายัด HTML เข้าไปเขียนใน JavaScript ได้ ดังนั้น React คือการที่เราจะเขียน View ด้วยภาษา
+                    JavaScript ที่มี HTML แทรกอยู่ ก็คือ JSX นั่นเอง
+                </h4>
+                <h3 style="display: inline;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;สรุปคือ <h4 style="display: inline;">สำหรับการเขียน Component นั้น
+                        ก็เหมือนกับการเขียน HTML ส่วน React ใช้สิ่งที่เรียกว่า JSX
+                        ในการแสดงผลเว็บไซต์หน้าตาจะเหมือน HTML แตกต่างตรงเราเขียนเข้าไปในไฟล์ JavaScript แทนไฟล์ HTML
+                        ทำให้เราสามารถเล่นอะไรกับมันได้มากกว่า</h4>
+                </h3>
+                <div class="row mt-4">
+                    <div class="col-3"></div>
+                    <div class="col-6">
+                        <div class="card mt-3 mb-2">
+                            <div class="card-header text-center">
+                                วิธีคิดของ React คือ ทุกอย่างเป็น Component
+                            </div>
+                            <img src="https://www.designil.com/wp-content/uploads/2017/07/react-jsx.webp" alt="">
+                        </div>
+                        <footer class="blockquote-footer text-right">วิธีคิดของ React คือ ทุกอย่างเป็น Component</footer>
+                    </div>
+                    <div class="col-3"></div>
                 </div>
             </div>
         </div>
 
         <br><br id="before"><br>
-        <div class="row">
-            <div class="col-4 d-flex align-items-center text-center">
+        <!-- <div class="bgwhite"> -->
+        <div class="row mt-5">
+            <div class="col-4 d-flex align-items-center text-center justify-content-center">
                 <h2>ถ้าเราอยากเขียน React <br> เราต้องเตรียมตัวและมีพื้นฐานยังไงบ้าง</h2>
             </div>
-            <div class="col-8 ">
+            <div class="col-8">
                 <div class="row">
                     <div class="col-12 d-flex">
                         <div class="card" style="width: 100%; margin: 1%;">
                             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo ad adipisci earum, similique
                             voluptates amet rerum eaque asperiores natus dolorum nam delectus totam sunt hic molestias,
                             ratione
-                            quo doloribus possimus.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo ad adipisci earum, similique
+                            quo doloribus possimus.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo ad
+                            adipisci earum, similique
                             voluptates amet rerum eaque asperiores natus dolorum nam delectus totam sunt hic molestias,
                             ratione
                             quo doloribus possimus.
@@ -271,7 +346,8 @@
                         <div class="card" style="width: 100%; margin: 1%;">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel distinctio quas obcaecati
                             veniam nostrum libero est tempore, facere, earum ipsum similique fuga quis tenetur illum
-                            omnis, laborum vero? Vitae, voluptatibus?Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo ad adipisci earum, similique
+                            omnis, laborum vero? Vitae, voluptatibus?Lorem ipsum dolor sit amet consectetur, adipisicing
+                            elit. Illo ad adipisci earum, similique
                             voluptates amet rerum eaque asperiores natus dolorum nam delectus totam sunt hic molestias,
                             ratione
                             quo doloribus possimus.
@@ -283,7 +359,8 @@
                             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo ad adipisci earum, similique
                             voluptates amet rerum eaque asperiores natus dolorum nam delectus totam sunt hic molestias,
                             ratione
-                            quo doloribus possimus.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo ad adipisci earum, similique
+                            quo doloribus possimus.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo ad
+                            adipisci earum, similique
                             voluptates amet rerum eaque asperiores natus dolorum nam delectus totam sunt hic molestias,
                             ratione
                             quo doloribus possimus.
@@ -292,7 +369,8 @@
                             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo ad adipisci earum, similique
                             voluptates amet rerum eaque asperiores natus dolorum nam delectus totam sunt hic molestias,
                             ratione
-                            quo doloribus possimus.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo ad adipisci earum, similique
+                            quo doloribus possimus.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo ad
+                            adipisci earum, similique
                             voluptates amet rerum eaque asperiores natus dolorum nam delectus totam sunt hic molestias,
                             ratione
                             quo doloribus possimus.
@@ -302,44 +380,80 @@
             </div>
         </div>
         <!-- <div class="card" style="width: 100%;">
-                    <div class="card-header text-lg-center">
-
-                    </div>
-                    <div class="card-body">
-                        <blockquote class="blockquote mb-0">
-                            <li>ความรู้พื้นฐานที่ควรรู้</li><br>
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-3 text-center">
-                                        <div class="card border-primary shadow-lg circle"
-                                            style="padding: 15%;width: 80%; height:100%">
-                                            JavaScript
+                        <div class="card-header text-lg-center">
+    
+                        </div>
+                        <div class="card-body">
+                            <blockquote class="blockquote mb-0">
+                                <li>ความรู้พื้นฐานที่ควรรู้</li><br>
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-3 text-center">
+                                            <div class="card border-primary shadow-lg circle"
+                                                style="padding: 15%;width: 80%; height:100%">
+                                                JavaScript
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="col-3 text-center">
-                                        <div class="card border-primary shadow-lg circle"
-                                            style="padding: 15%;width: 80%; height:100%">
-                                            Node.js
+                                        <div class="col-3 text-center">
+                                            <div class="card border-primary shadow-lg circle"
+                                                style="padding: 15%;width: 80%; height:100%">
+                                                Node.js
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="col-3 text-center">
-                                        <div class="card border-primary shadow-lg circle"
-                                            style="padding: 15%;width: 80%; height:100%">
-                                            ES6/ES7
+                                        <div class="col-3 text-center">
+                                            <div class="card border-primary shadow-lg circle"
+                                                style="padding: 15%;width: 80%; height:100%">
+                                                ES6/ES7
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="col-3 text-center">
-                                        <div class="card border-primary shadow-lg circle"
-                                            style="padding: 15%;width: 80%; height:100%">
-                                            Command Line
+                                        <div class="col-3 text-center">
+                                            <div class="card border-primary shadow-lg circle"
+                                                style="padding: 15%;width: 80%; height:100%">
+                                                Command Line
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        </blockquote>
-                    </div>
-                </div> -->
-        <br><br><br id=""><br><br>
+                            </blockquote>
+                        </div>
+                    </div> -->
+        <!-- </div> -->
+        <br><br><br id="friend"><br><br>
+        <div>
+            <h1>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo ad adipisci earum, similique
+                voluptates amet rerum eaque asperiores natus dolorum nam delectus totam sunt hic molestias,
+                ratione
+                quo doloribus possimus.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo ad
+                adipisci earum, similique
+                voluptates amet rerum eaque asperiores natus dolorum nam delectus totam sunt hic molestias,
+                ratione
+                quo doloribus possimus.
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo ad adipisci earum, similique
+                voluptates amet rerum eaque asperiores natus dolorum nam delectus totam sunt hic molestias,
+                ratione
+                quo doloribus possimus.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo ad
+                adipisci earum, similique
+                voluptates amet rerum eaque asperiores natus dolorum nam delectus totam sunt hic molestias,
+                ratione
+                quo doloribus possimus.
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo ad adipisci earum, similique
+                voluptates amet rerum eaque asperiores natus dolorum nam delectus totam sunt hic molestias,
+                ratione
+                quo doloribus possimus.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo ad
+                adipisci earum, similique
+                voluptates amet rerum eaque asperiores natus dolorum nam delectus totam sunt hic molestias,
+                ratione
+                quo doloribus possimus.
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo ad adipisci earum, similique
+                voluptates amet rerum eaque asperiores natus dolorum nam delectus totam sunt hic molestias,
+                ratione
+                quo doloribus possimus.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo ad
+                adipisci earum, similique
+                voluptates amet rerum eaque asperiores natus dolorum nam delectus totam sunt hic molestias,
+                ratione
+                quo doloribus possimus.
+            </h1>
+        </div>
     </div>
 </body>
 
