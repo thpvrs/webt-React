@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REACT</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree&family=Roboto&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <style>
+        * {
+            font-family: 'Bai Jamjuree', sans-serif;
+            font-family: 'Roboto', sans-serif;
+            /* text-align: justify; */
+
+        }
+
+        body {
+            /* background: #0AD0EF; */
+            /* background: whitesmoke; */
+            background-color: antiquewhite;
+        }
+
+        section{
+            background-color: white;
+            height: 100vh;
+        }
+
+        section::before {
+            content: "";
+            width: 100%;
+            height: 1000px;
+            background: #232323;
+            transform: skewY(-15deg);
+            display: block;
+            position: fixed;
+            top: -600px;
+            left: 0;
+        }
+
+        .circle {
+            border-radius: 50%;
+        }
+
+        .box {
+            border-radius: 25px;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <div class="container-fluid">
+            <nav class="navbar navbar-light bg-light m-5" style="border-radius: 15px;">
+                <a class="navbar-brand" href="#">
+                    <img src="/docs/4.0/assets/brand/bootstrap-solid.svg" width="30" height="30"
+                        class="d-inline-block align-top" alt="">
+                    Bootstrap
+                </a>
+            </nav>
+            <div class="row">
+                <div class="col-4">
+                    <br><br><br>
+                    <div class="row">
+                        <div class="col m-5 text-right">
+                            <a href="#what">
+                                <button type="button" class="btn btn-dark box">React คืออะไร ?</button>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col m-5 text-center">
+                            <!-- <a href=""> -->
+                            <button type="button" class="btn btn-dark box">ใช้ React เพื่อเขียนอะไร ?</button>
+                            <!-- </a> -->
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col m-5 text-right">
+                            <!-- <a href=""> -->
+                            <button type="button" class="btn btn-dark box">เพื่อนๆของ React</button>
+                            <!-- </a> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="row">
+                        <div class="col m-5 text-center">
+                            <a href="#before">
+                                <button type="button" class="btn btn-dark box">เตรียมตัวก่อนเขียน React</button>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div>
+                            <img class="circle"
+                                src="https://iamnet.me/wp-content/uploads/2016/12/addthis-react-flux-javascript-scaling.png"
+                                alt="React" width="100%">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <br><br><br><br><br><br>
+                    <div class="row">
+                        <div class="col m-5 text-left">
+                            <!-- <a href=""> -->
+                            <button type="button" class="btn btn-dark box">React Livecycle</button>
+                            <!-- </a> -->
+    
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col m-5 text-center">
+                            <!-- <a href=""> -->
+                            <button type="button" class="btn btn-dark box">สมองของ React ทำมาจากอะไร</button>
+                            <!-- </a> -->
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col m-5 text-left">
+                            <!-- <a href=""> -->
+                            <button type="button" class="btn btn-dark box">React เหมาะกับงานแบบไหน</button>
+                            <!-- </a> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <br><br id="before"><br>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-1"></div>
+            <div class="col-10">
+                <div class="card" style="width: 100%;">
+                    <div class="card-header text-lg-center">
+                        <h2>ถ้าเราอยากเขียน React เราต้องเตรียมตัวและมีพื้นฐานยังไงบ้าง</h2>
+                    </div>
+                    <div class="card-body">
+                        <blockquote class="blockquote mb-0">
+                            <li>ความรู้พื้นฐานที่ควรรู้</li><br>
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-3 text-center">
+                                        <div class="card border-primary shadow-lg circle"
+                                            style="padding: 15%;width: 80%; height:100%">
+                                            JavaScript
+                                        </div>
+                                    </div>
+                                    <div class="col-3 text-center">
+                                        <div class="card border-primary shadow-lg circle"
+                                            style="padding: 15%;width: 80%; height:100%">
+                                            Node.js
+                                        </div>
+                                    </div>
+                                    <div class="col-3 text-center">
+                                        <div class="card border-primary shadow-lg circle"
+                                            style="padding: 15%;width: 80%; height:100%">
+                                            ES6/ES7
+                                        </div>
+                                    </div>
+                                    <div class="col-3 text-center">
+                                        <div class="card border-primary shadow-lg circle"
+                                            style="padding: 15%;width: 80%; height:100%">
+                                            Command Line
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </blockquote>
+                    </div>
+                <!-- </div> -->
+                <br><br id="what"><br>
+                <div class="row">
+                    <!-- <div class="col-1"></div> -->
+                    <div class="col-12">
+                        <div class="card" style="width: 100%;">
+                            <div class="card-header text-center p-3">
+                                <h2>ก่อนที่เราจะไปทำความรู้จักกับ REACT ว่ามันคืออะไร เราจะพามาดูกันก่อนว่า<br>
+                                    การทำเว็บแบบเดิมที่เราทำมันต่างจากการทำเว็บแบบใหม่ด้วย React ยังไงค่ะ</h2>
+                            </div>
+                            <div class="card-body">
+                                <div class="card-deck">
+                                    <div class="card">
+                                        <img class="card-img-top"
+                                            src="https://www.designil.com/wp-content/uploads/2017/07/how-web-work-designil.webp"
+                                            alt="เว็บดั้งเดิม">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Card title</h5>
+                                            <p class="card-text">This is a longer card with supporting text below as a
+                                                natural
+                                                lead-in to additional content. This content is a little bit longer.</p>
+                                            <p class="card-text"><small class="text-muted">Last updated 3 mins
+                                                    ago</small></p>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <img class="card-img-top"
+                                            src="https://www.designil.com/wp-content/uploads/2017/07/how-modern-web-work.webp"
+                                            alt="เว็บที่เขียนโดย React">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Card title</h5>
+                                            <p class="card-text">This card has supporting text below as a natural
+                                                lead-in to
+                                                additional content.</p>
+                                            <p class="card-text"><small class="text-muted">Last updated 3 mins
+                                                    ago</small></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <br><br>
+                                <hr>
+                                <h2 class="text-center">React คืออะไร ?</h2>
+                                <hr>
+                                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    React เป็น JavaScript library หรือจะเรียกว่าเป็น Javascript Framework
+                                    ที่ใช้สำหรับสร้าง
+                                    user interface ที่ให้เราสามารถเขียนโค้ดในการสร้าง UI
+                                    ที่มีความซับซ้อนแบ่งเป็นส่วนเล็กๆออกจากกันได้
+                                    ซึ่งแต่ละส่วนสามารถแยกการทำงานออกจากกันได้อย่างอิสระ และทำให้สามารถนำชิ้นส่วน UI
+                                    เหล่านั้นไปใช้ซ้ำได้อีก</p>
+                            </div>
+                        </div>
+                        <!-- <div class="col-1"></div> -->
+                        <br><br><br>
+                    </div>
+                </div>
+            </div>
+            <div class="col-1"></div>
+        </div>
+    </div>
+</body>
+
+</html>
