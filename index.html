@@ -39,6 +39,12 @@
             /* height: 100vh; */
         }
 
+        hr {
+            width: 80%;
+            size: 3;
+            color: black;
+        }
+
         section::before {
             content: "";
             width: 100%;
@@ -102,7 +108,7 @@
                     <div class="row">
                         <div class="col m-5 text-right">
                             <a href="#friend">
-                                <button type="button" class="btn btn-dark box">เพื่อนๆของ React</button>
+                                <button type="button" class="btn btn-dark box">คอนเซปต์และเพื่อนๆของ React</button>
                             </a>
                         </div>
                     </div>
@@ -148,87 +154,92 @@
     <br><br id="what"><br><br>
     <div class="container-fluid">
         <div class="row">
-            <div class="col-12 text-center mb-4">
+            <div class="col-12 text-center mt-4">
                 <h2>ก่อนที่เราจะไปทำความรู้จักกับ REACT ว่ามันคืออะไร เราจะพามาดูกันก่อนว่า<br>
-                    การทำเว็บแบบเดิมที่เราทำมันต่างจากการทำเว็บแบบใหม่ด้วย React ยังไงค่ะ</h2>
+                    การทำเว็บแบบเดิมที่เราทำมันต่างจากการทำเว็บแบบใหม่ด้วย React ยังไง</h2>
             </div>
-            <div class="col-5 pl-5">
-                <div class="card">
-                    <div class="card-header text-center">
-                        <h4>การทำเว็บไซต์แบบดั้งเดิม</h4>
-                    </div>
-                    <img class="card-img-top"
-                        src="https://www.designil.com/wp-content/uploads/2017/07/how-web-work-designil.webp"
-                        alt="เว็บดั้งเดิม">
-                    <div class="card-body">
-                        <h5 class="card-title">
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;การทำเว็บไซต์ด้วยเทคนิคเดิม คือ HTML, CSS,
-                            JavaScript, PHP (หรือภาษา
-                            Backend ภาษาใดภาษาหนึ่ง) ส่วนใหญ่ “การทำงานทั้งหมดจะอยู่ที่ Server”
-                            สามารถสรุปลำดับการทำงานได้ดังนี้
-                        </h5>
-                        <!-- <p class="card-text">&nbsp;&nbsp;&nbsp;&nbsp;การทำเว็บไซต์ด้วยเทคนิคเดิม คือ HTML, CSS, JavaScript, PHP (หรือภาษา
-                            Backend ภาษาใดภาษาหนึ่ง) ส่วนใหญ่ “การทำงานทั้งหมดจะอยู่ที่ Server” ดังรูปข้างบน</p> -->
-                        <p class="card-text">
-                            1. User เข้าเว็บไซต์เรา https://www.designil.com ก็จะส่งไปบอก Server <br>
-                            2. Server (PHP) จะประมวลผลผ่านภาษา Backend ว่า User เข้าหน้านี้แล้วต้องให้อะไรบ้าง เช่น
-                            ต้องการบทความ 10 บทความล่าสุด <br>
-                            3. Server นำข้อมูลที่เก็บไว้ออกมาจาก Database (เช่น MySQL) แล้ววางลงไปในเทมเพลต HTML
-                            ที่เตรียมไว้ <br>
-                            4. Server ส่ง HTML กลับไปหา User <br>
-                        </p>
-                        <!-- <p class="card-text"><small class="text-muted">Last updated 3 mins
-                                ago</small></p> -->
+            <hr>
+            <div class="row mt-5">
+                <!-- <div class="col-5 pl-5 align-items-center"></div> -->
+                <div class="col-5 pl-5">
+                    <div class="card">
+                        <div class="card-header text-center">
+                            <h4>การทำเว็บไซต์แบบดั้งเดิม</h4>
+                        </div>
+                        <img class="card-img-top"
+                            src="https://www.designil.com/wp-content/uploads/2017/07/how-web-work-designil.webp"
+                            alt="เว็บดั้งเดิม">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;การทำเว็บไซต์ด้วยเทคนิคเดิม คือ HTML,
+                                CSS,
+                                JavaScript, PHP (หรือภาษา
+                                Backend ภาษาใดภาษาหนึ่ง) ส่วนใหญ่ “การทำงานทั้งหมดจะอยู่ที่ Server”
+                                สามารถสรุปลำดับการทำงานได้ดังนี้
+                            </h5>
+                            <!-- <p class="card-text">&nbsp;&nbsp;&nbsp;&nbsp;การทำเว็บไซต์ด้วยเทคนิคเดิม คือ HTML, CSS, JavaScript, PHP (หรือภาษา
+                                Backend ภาษาใดภาษาหนึ่ง) ส่วนใหญ่ “การทำงานทั้งหมดจะอยู่ที่ Server” ดังรูปข้างบน</p> -->
+                            <p class="card-text">
+                                1. User เข้าเว็บไซต์เรา https://www.designil.com ก็จะส่งไปบอก Server <br>
+                                2. Server (PHP) จะประมวลผลผ่านภาษา Backend ว่า User เข้าหน้านี้แล้วต้องให้อะไรบ้าง เช่น
+                                ต้องการบทความ 10 บทความล่าสุด <br>
+                                3. Server นำข้อมูลที่เก็บไว้ออกมาจาก Database (เช่น MySQL) แล้ววางลงไปในเทมเพลต HTML
+                                ที่เตรียมไว้ <br>
+                                4. Server ส่ง HTML กลับไปหา User <br>
+                            </p>
+                            <!-- <p class="card-text"><small class="text-muted">Last updated 3 mins
+                                    ago</small></p> -->
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-7 pr-5">
-                <div class="card">
-                    <div class="card-header text-center">
-                        <h4>การทำเว็บไซต์แบบใหม่</h4>
-                    </div>
-                    <img class="card-img-top"
-                        src="https://www.designil.com/wp-content/uploads/2017/07/how-modern-web-work.webp"
-                        alt="เว็บที่เขียนโดย React">
-                    <div class="card-body">
-                        <!-- <h5 class="card-title">
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ไอเดียนี้เมื่อก่อนเราเรียกว่า AJAX นั่นเอง
-                            ก็คือ ใช้ JavaScript ส่ง Request ไปขอข้อมูลจาก Server แล้ว Server
-                            ตอบกลับมาเป็นข้อมูลอย่างเดียว เราค่อยใช้ JavaScript เอาข้อมูลมาแสดงอีกที
-                            อย่างไรก็ตาม พอข้อมูลถูกส่งจาก Server มาให้ Web Browser แล้ว ก็เกิดปัญหาว่า
-                            “แล้วจะจัดการข้อมูลบน Web Browser อย่างไร” ซึ่งเมื่อก่อนไม่มี Library
-                            คอยช่วยเหลือด้านการแสดงผล เลยทำให้โค้ดพันกันมั่วไปหมด <br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;JavaScript Framework สมัยใหม่ เช่น
-                            React ก็เลยออกมาเพื่อช่วยให้เราจัดการเรื่องการดึงข้อมูล
-                            การแสดงผลข้อมูลในเว็บให้ง่ายขึ้นนั่นเองครับ</h5> -->
-                        <h5 class="card-title">
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            การทำเว็บไซต์แบบใหม่ คือ ใช้ JavaScript ส่ง Request ไปขอข้อมูลจาก Server แล้ว Server
-                            ตอบกลับมาเป็นข้อมูลอย่างเดียว เราค่อยใช้ JavaScript เอาข้อมูลมาแสดงอีกที
-                            อย่างไรก็ตาม พอข้อมูลถูกส่งจาก Server มาให้ Web Browser แล้ว ก็เกิดปัญหาว่า
-                            “แล้วจะจัดการข้อมูลบน Web Browser อย่างไร” ซึ่งเมื่อก่อนไม่มี Library
-                            คอยช่วยเหลือด้านการแสดงผล เลยทำให้โค้ดพันกันมั่วไปหมด <br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;JavaScript Framework สมัยใหม่ เช่น
-                            React ก็เลยออกมาเพื่อช่วยให้เราจัดการเรื่องการดึงข้อมูล
-                            การแสดงผลข้อมูลในเว็บให้ง่ายขึ้น
-                        </h5>
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-6">
-                                    <p class="card-text">
-                                        1. User เข้าเว็บไซต์เรา<br>
-                                        2. โหลด HTML, CSS, JS ขึ้นมาก่อน แล้ว JavaScript ค่อยขอบทความล่าสุดจาก
-                                        Server<br>
-                                        3. Server ได้รับคำขอ ก็ส่งไปขอข้อมูลจากฐานข้อมูลอีกที<br>
-                                    </p>
-                                </div>
-                                <div class="col-6">
-                                    <p class="card-text">
-                                        4. Database ส่งข้อมูลกลับมาให้ Server<br>
-                                        5. Server ส่งข้อมูลกลับไปให้ Browser ทาง API โดยส่วนใหญ่จะส่งเป็น JSON เพราะ
-                                        JavaScript สามารถนำไปใช้งานต่อได้ง่าย<br>
-                                        6. JavaScript นำข้อมูลที่ได้รับมาจัดการแสดงผลบนหน้าเว็บไซต์<br>
-                                    </p>
+                <div class="col-7 pr-5">
+                    <div class="card">
+                        <div class="card-header text-center">
+                            <h4>การทำเว็บไซต์แบบใหม่</h4>
+                        </div>
+                        <img class="card-img-top"
+                            src="https://www.designil.com/wp-content/uploads/2017/07/how-modern-web-work.webp"
+                            alt="เว็บที่เขียนโดย React">
+                        <div class="card-body">
+                            <!-- <h5 class="card-title">
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ไอเดียนี้เมื่อก่อนเราเรียกว่า AJAX นั่นเอง
+                                ก็คือ ใช้ JavaScript ส่ง Request ไปขอข้อมูลจาก Server แล้ว Server
+                                ตอบกลับมาเป็นข้อมูลอย่างเดียว เราค่อยใช้ JavaScript เอาข้อมูลมาแสดงอีกที
+                                อย่างไรก็ตาม พอข้อมูลถูกส่งจาก Server มาให้ Web Browser แล้ว ก็เกิดปัญหาว่า
+                                “แล้วจะจัดการข้อมูลบน Web Browser อย่างไร” ซึ่งเมื่อก่อนไม่มี Library
+                                คอยช่วยเหลือด้านการแสดงผล เลยทำให้โค้ดพันกันมั่วไปหมด <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;JavaScript Framework สมัยใหม่ เช่น
+                                React ก็เลยออกมาเพื่อช่วยให้เราจัดการเรื่องการดึงข้อมูล
+                                การแสดงผลข้อมูลในเว็บให้ง่ายขึ้นนั่นเองครับ</h5> -->
+                            <h5 class="card-title">
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                การทำเว็บไซต์แบบใหม่ คือ ใช้ JavaScript ส่ง Request ไปขอข้อมูลจาก Server แล้ว Server
+                                ตอบกลับมาเป็นข้อมูลอย่างเดียว เราค่อยใช้ JavaScript เอาข้อมูลมาแสดงอีกที
+                                อย่างไรก็ตาม พอข้อมูลถูกส่งจาก Server มาให้ Web Browser แล้ว ก็เกิดปัญหาว่า
+                                “แล้วจะจัดการข้อมูลบน Web Browser อย่างไร” ซึ่งเมื่อก่อนไม่มี Library
+                                คอยช่วยเหลือด้านการแสดงผล เลยทำให้โค้ดพันกันมั่วไปหมด <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;JavaScript Framework สมัยใหม่ เช่น
+                                React ก็เลยออกมาเพื่อช่วยให้เราจัดการเรื่องการดึงข้อมูล
+                                การแสดงผลข้อมูลในเว็บให้ง่ายขึ้น
+                            </h5>
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <p class="card-text">
+                                            1. User เข้าเว็บไซต์เรา<br>
+                                            2. โหลด HTML, CSS, JS ขึ้นมาก่อน แล้ว JavaScript ค่อยขอบทความล่าสุดจาก
+                                            Server<br>
+                                            3. Server ได้รับคำขอ ก็ส่งไปขอข้อมูลจากฐานข้อมูลอีกที<br>
+                                        </p>
+                                    </div>
+                                    <div class="col-6">
+                                        <p class="card-text">
+                                            4. Database ส่งข้อมูลกลับมาให้ Server<br>
+                                            5. Server ส่งข้อมูลกลับไปให้ Browser ทาง API โดยส่วนใหญ่จะส่งเป็น JSON เพราะ
+                                            JavaScript สามารถนำไปใช้งานต่อได้ง่าย<br>
+                                            6. JavaScript นำข้อมูลที่ได้รับมาจัดการแสดงผลบนหน้าเว็บไซต์<br>
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -267,7 +278,7 @@
                 <div style="display: flex;">
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img
                         src="https://cdn.discordapp.com/attachments/904730719618744370/904730809435586581/Screenshot_2021-11-01_195023.png"
-                        alt="react" class="box">
+                        alt="react" class="box" width="100%">
                     <p><br>&nbsp;&nbsp;&nbsp;&nbsp;ซึ่ง ReactDOM.render() เป็นฟังก์ชันที่ตัว React จะทำการ render HTML
                         ที่เขียนมา โดยมีจุดที่จะ render อยู่ที่ DOM ที่มี id เป็น root จากตัวอย่างนี้</p>
                 </div>
@@ -298,12 +309,13 @@
             </div>
             <!-- เช็คคำอีกที ข้างล่าง -->
             <div class="col-12"><br><br>
-                <h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;นั่นคือเราจะไม่เขียน HTML ใน HTML กันอีกต่อไป เราจะใช้ React
-                    เขียนอยู่ในรูปแบบ JavaScript แทน ซึ่งทำให้มีภาษาใหม่เกิดขึ้นมา (ก็ไม่เชิงภาษาใหม่) นั่นคือ JSX
+                <h4>&nbsp;&nbsp;&nbsp;&nbsp;นั่นคือเราจะไม่เขียน HTML ใน HTML กันอีกต่อไป เราจะใช้ React
+                    เขียนอยู่ในรูปแบบ JavaScript แทน ซึ่งทำให้มีภาษาใหม่เกิดขึ้นมาคือ JSX
                     ที่ทำให้เรายัด HTML เข้าไปเขียนใน JavaScript ได้ ดังนั้น React คือการที่เราจะเขียน View ด้วยภาษา
                     JavaScript ที่มี HTML แทรกอยู่ ก็คือ JSX นั่นเอง
                 </h4>
-                <h3 style="display: inline;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;สรุปคือ <h4 style="display: inline;">สำหรับการเขียน Component นั้น
+                <h3 style="display: inline;">&nbsp;&nbsp;&nbsp;&nbsp;สรุปคือ <h4 style="display: inline;">
+                        สำหรับการเขียน Component นั้น
                         ก็เหมือนกับการเขียน HTML ส่วน React ใช้สิ่งที่เรียกว่า JSX
                         ในการแสดงผลเว็บไซต์หน้าตาจะเหมือน HTML แตกต่างตรงเราเขียนเข้าไปในไฟล์ JavaScript แทนไฟล์ HTML
                         ทำให้เราสามารถเล่นอะไรกับมันได้มากกว่า</h4>
@@ -313,11 +325,12 @@
                     <div class="col-6">
                         <div class="card mt-3 mb-2">
                             <div class="card-header text-center">
-                                วิธีคิดของ React คือ ทุกอย่างเป็น Component
+                                อีกตัวอย่างการเปรียบเทียบระหว่าง HTML กับ React
                             </div>
                             <img src="https://www.designil.com/wp-content/uploads/2017/07/react-jsx.webp" alt="">
                         </div>
-                        <footer class="blockquote-footer text-right">วิธีคิดของ React คือ ทุกอย่างเป็น Component</footer>
+                        <footer class="blockquote-footer text-right">วิธีคิดของ React คือ ทุกอย่างเป็น Component
+                        </footer>
                     </div>
                     <div class="col-3"></div>
                 </div>
@@ -326,54 +339,110 @@
 
         <br><br id="before"><br>
         <!-- <div class="bgwhite"> -->
+        <!-- ตรงนี้ค่อยมาคิดว่าจะเพพิ่ม ข้อมูล js มั้ย -->
         <div class="row mt-5">
-            <div class="col-4 d-flex align-items-center text-center justify-content-center">
+            <div class="col-12 d-flex align-items-center text-center justify-content-center">
                 <h2>ถ้าเราอยากเขียน React <br> เราต้องเตรียมตัวและมีพื้นฐานยังไงบ้าง</h2>
             </div>
-            <div class="col-8">
-                <div class="row">
+            <hr>
+            <div class="col-12">
+                <div class="row mt-4">
                     <div class="col-12 d-flex">
                         <div class="card" style="width: 100%; margin: 1%;">
-                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo ad adipisci earum, similique
-                            voluptates amet rerum eaque asperiores natus dolorum nam delectus totam sunt hic molestias,
-                            ratione
-                            quo doloribus possimus.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo ad
-                            adipisci earum, similique
-                            voluptates amet rerum eaque asperiores natus dolorum nam delectus totam sunt hic molestias,
-                            ratione
-                            quo doloribus possimus.
+                            <div class="card-header text-center">
+                                ES6 (ECMAScript 6)
+                            </div>
+                            <div class="card-body">
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;มันคือภาษา JavaScript
+                                เวอร์ชันใหม่ที่มีฟีเจอร์มากมาย เช่น
+                                ประกาศฟังก์ชันโดยใช้ลูกศร (=>), ประกาศตัวแปรใน block scope ด้วย let, Class และอื่นๆ
+                                ซึ่งใน React สาเหตุที่ใช้ ES6 เพราะฟีเจอร์ใหม่ๆ
+                                มันช่วยให้เราเขียนโค้ดได้ง่ายขึ้น และสวยกว่าเดิมมาก เทียบกับเขียน JavaScript เดิมๆ
+                            </div>
                         </div>
                         <div class="card" style="width: 100%; margin: 1%;">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel distinctio quas obcaecati
-                            veniam nostrum libero est tempore, facere, earum ipsum similique fuga quis tenetur illum
-                            omnis, laborum vero? Vitae, voluptatibus?Lorem ipsum dolor sit amet consectetur, adipisicing
-                            elit. Illo ad adipisci earum, similique
-                            voluptates amet rerum eaque asperiores natus dolorum nam delectus totam sunt hic molestias,
-                            ratione
-                            quo doloribus possimus.
+                            <div class="card-header text-center">
+                                Babel
+                            </div>
+                            <div class="card-body">
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;สืบเนื่องจาก ES6 เนี่ย browser
+                                บางตัวยังไม่รองรับ ถ้าเราอยากเขียน ES6
+                                เราจะต้องแปลงให้เป็น JavaScript ที่ browser รองรับได้ ซึ่ง Babel
+                                เป็นคนทำส่วนนี้ให้
+                            </div>
                         </div>
                     </div>
                     <div class="col-12 d-flex">
 
                         <div class="card" style="width: 100%; margin: 1%;">
-                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo ad adipisci earum, similique
-                            voluptates amet rerum eaque asperiores natus dolorum nam delectus totam sunt hic molestias,
-                            ratione
-                            quo doloribus possimus.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo ad
-                            adipisci earum, similique
-                            voluptates amet rerum eaque asperiores natus dolorum nam delectus totam sunt hic molestias,
-                            ratione
-                            quo doloribus possimus.
+                            <div class="card-header text-center">
+                                Node.js
+                            </div>
+                            <div class="card-body">
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Cross Platform Runtime Environment
+                                สำหรับฝั่ง Server และเป็น Open Source
+                                ซึ่งเขียนด้วยภาษา JavaScript สรุปรวมๆ NodeJS ก็คือ Platform ตัวหนึ่งที่เขียนด้วย
+                                JavaScript สำหรับเป็น Web Server
+                            </div>
                         </div>
                         <div class="card" style="width: 100%; margin: 1%;">
-                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo ad adipisci earum, similique
-                            voluptates amet rerum eaque asperiores natus dolorum nam delectus totam sunt hic molestias,
-                            ratione
-                            quo doloribus possimus.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo ad
-                            adipisci earum, similique
-                            voluptates amet rerum eaque asperiores natus dolorum nam delectus totam sunt hic molestias,
-                            ratione
-                            quo doloribus possimus.
+                            <div class="card-header text-center">
+                                Command Line
+                            </div>
+                            <div class="card-body">
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;สามารถใช้ Command Line ได้ พอรู้จัก NPM,
+                                Yarn เป็นต้น
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="card" style="margin: 1%;">
+                            <div class="card-header text-center">
+                                Webpack
+                            </div>
+                            <div class="card-body">
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;เป็นเครื่องมือสำหรับช่วยแปลงโค้ด ES6
+                                เป็น ES5 หรือเวลาเราเขียนโค้ดหลายๆไฟล์ เราอาจจะประสบปัญหาหลายๆอย่าง เช่น เราจะ include
+                                script ไหนก่อนดี รวมถึงพอไฟล์เยอะๆ มันก็จะโหลดช้า ตัว Webpack
+                                ก็จะมัดรวมพวกนี้ให้เป็นไฟล์เดียว พร้อมทั้งจัดลำดับการ include ให้เลย
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <!-- <div class="card mb-3" style="max-width: 540px; margin: 1%;">
+                            <div class="row g-0">
+                                <div class="col-7">
+                                    <img src="https://www.designil.com/wp-content/uploads/2017/07/react-concept-designil.webp"
+                                        class="img-fluid rounded-start" alt="..." width="100%" height>
+                                </div>
+                                <div class="col-5">
+                                    <div class="card-body">
+                                        <h5 class="card-title">คอนเซปต์</h5>
+                                        <hr style="width: 100%;">
+                                        <li>Component – ส่วนต่าง ๆ ในเว็บเราจะมองเป็น Component</li>
+                                        <li>State – ข้อมูลที่อยู่ใน Component แต่ละชิ้น เราเรียกว่า State</li>
+                                        <li>Props – ข้อมูลที่ถูกส่งต่อจาก Component ชั้นบนลงไปชั้นล่าง เราเรียกว่า Props
+                                            (Properties)</li>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> -->
+                        <div class="card" style="margin: 1%;">
+                            <div class="card-header text-center">
+                                คอนเซปต์ที่เราต้องรู้เพื่อเขียน React หลักๆ มี 3 อย่าง
+                            </div>
+                            <!-- <div class="card-body"></div> -->
+                            <div class="row">
+                                <div class="col-6">
+                                    <!-- <img src="https://www.designil.com/wp-content/uploads/2017/07/react-concept-designil.webp" alt=""> -->
+                                </div>
+                                <div class="col-6">
+                                    <li>Component – ส่วนต่าง ๆ ในเว็บเราจะมองเป็น Component</li>
+                                    <li>State – ข้อมูลที่อยู่ใน Component แต่ละชิ้น เราเรียกว่า State</li>
+                                    <li>Props – ข้อมูลที่ถูกส่งต่อจาก Component ชั้นบนลงไปชั้นล่าง เราเรียกว่า Props
+                                        (Properties)</li>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -419,41 +488,185 @@
                     </div> -->
         <!-- </div> -->
         <br><br><br id="friend"><br><br>
-        <div>
-            <h1>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo ad adipisci earum, similique
-                voluptates amet rerum eaque asperiores natus dolorum nam delectus totam sunt hic molestias,
-                ratione
-                quo doloribus possimus.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo ad
-                adipisci earum, similique
-                voluptates amet rerum eaque asperiores natus dolorum nam delectus totam sunt hic molestias,
-                ratione
-                quo doloribus possimus.
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo ad adipisci earum, similique
-                voluptates amet rerum eaque asperiores natus dolorum nam delectus totam sunt hic molestias,
-                ratione
-                quo doloribus possimus.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo ad
-                adipisci earum, similique
-                voluptates amet rerum eaque asperiores natus dolorum nam delectus totam sunt hic molestias,
-                ratione
-                quo doloribus possimus.
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo ad adipisci earum, similique
-                voluptates amet rerum eaque asperiores natus dolorum nam delectus totam sunt hic molestias,
-                ratione
-                quo doloribus possimus.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo ad
-                adipisci earum, similique
-                voluptates amet rerum eaque asperiores natus dolorum nam delectus totam sunt hic molestias,
-                ratione
-                quo doloribus possimus.
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo ad adipisci earum, similique
-                voluptates amet rerum eaque asperiores natus dolorum nam delectus totam sunt hic molestias,
-                ratione
-                quo doloribus possimus.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo ad
-                adipisci earum, similique
-                voluptates amet rerum eaque asperiores natus dolorum nam delectus totam sunt hic molestias,
-                ratione
-                quo doloribus possimus.
-            </h1>
+        <div class="row">
+            <div class="col-12 text-center mb-3">
+                <h2>topic</h2>
+                <hr>
+            </div>
+            <div class="col-6 bg-light text-center d-flex align-items-center justify-content-center">
+                <h3>Component คืออะไร ?</h3>
+            </div>
+            <div class="col-6 p-5">
+                <h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ถ้าพูดถึงว่าเราจะใช้ React เพื่อเขียนอะไร
+                    คำตอบคือเรากำลังจะเขียน Component<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;แนวคิดของ Component คือการเขียนองค์ประกอบของ View
+                    ให้ย่อยที่สุดเท่าที่จะย่อยได้ และเน้นให้ Reusable
+                    ได้เยอะ</h4>
+            </div>
+            <div class="col-6 p-5 d-flex align-items-center justify-content-center">
+                <h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ตัวอย่างเช่น ถ้าเราสามารถเขียน Component ของ
+                    Searchbox ไว้เพียงครั้งเดียว และเมื่อมีใครอยากใช้ Searchbox
+                    ก็แค่ไปดึงมาใช้ ถ้าจะแก้ก็แก้ที่ Searchbox Component อันเดียว
+                    ที่เหลือจะเปลี่ยนตาม ซึ่งการแบ่ง Component จะมีข้อดี คือ <br><br>
+                    <ul>
+                        <li>มีการแบ่งส่วนกันเขียน แยกส่วนกันชัดเจน</li><br>
+                        <li>สามารถนำ component ไปใช้ที่อื่นได้ หากต้องการอะไรที่คล้ายๆ กัน</li><br>
+                        <li>แก้ไขง่าย</li>
+                    </ul>
+                </h4>
+            </div>
+            <!-- <div class="col-6 bg-light"> -->
+            <!-- <div class="row bg-light"> -->
+            <div class="col-2 p-5 bg-light d-flex align-items-center text-center">
+                <mark>
+                    <h5>ตัวอย่าง จาก Facebook</h5>
+                </mark>
+                <img src="https://cdn-images-1.medium.com/max/1600/1*m2k00x1C__Nbkd2tyemyqw.png" alt="" width="100%">
+            </div>
+            <div class="col-4 p-5 bg-light">
+                <h5>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;เราสามารถแบ่งหน้าจอนี้ออกมาได้ 5 Component ด้วยกัน
+                    คือ <br><br>
+                    1. ProductRow (สีแดง): แสดงชื่อสินค้า และราคา<br><br>
+                    2. ProductCategoryRow (สีฟ้าอ่อน): แสดงชื่อประเภทสินค้า<br><br>
+                    3. ProductTable (สีเขียว): แสดงรายการสินค้า (ซึ่งจะประกอบด้วย ProductCategoryRow +
+                    ProductRow)<br><br>
+                    4. SearchBar (สีน้ำเงิน): แสดง Search Box ที่ filter ข้อมูลตาราง พร้อมปุ่ม Option
+                    ว่าจะให้โชว์เฉพาะสินค้าที่มีใน stock <br><br>
+                    5. FilterableProductTable (สีส้ม): แสดงข้อมูลสินค้า ที่เราสามารถ filter ข้อมูลในตารางได้
+                    ด้วยการพิมพ์ใน search box (เป็นตัวครอบทุกอันทั้งหมด)<br><br>
+                </h5>
+            </div>
+            <div class="col-12 bg-light p-5 text-center">
+                <h4>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;โดย Component ใน React นั้นสามารถเขียนได้หลายแบบมาก
+                    แต่แบบที่ใช้กันเยอะและเป็นมาตรฐานสำหรับมือใหม่
+                    คือ การ extends คลาส Component ของ React มานั่นเอง
+                </h4><br>
+                <img src="https://cdn.discordapp.com/attachments/904730719618744370/904947080898953216/Screenshot_2021-11-02_111549.png"
+                    alt="" width="50%" class="box">
+                <h4><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;เวลาข้างนอกจะเอาไปใช้ ก็จะใช้เหมือนเรามี tag HTML
+                    นั้นๆมาให้ใช้เลย
+                </h4><br>
+                <img src="https://cdn.discordapp.com/attachments/904730719618744370/904951112799490058/Screenshot_2021-11-02_113155.png"
+                    alt="" width="50%" class="box">
+            </div>
+            <div class="col-6 bg-light text-center d-flex align-items-center justify-content-center">
+                <h3>Props กับ State คืออะไร ?</h3>
+            </div>
+            <div class="col-6 p-5">
+                <h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ให้นึกถึง HTML ธรรมดา อย่างใน <mark>tag a</mark>
+                    เราสามารถใช้
+                    href เพื่อบอกได้ว่ากดลิ้งแล้วจะไปไหน โดยการเขียนต่อไปใน <mark>tag a</mark> เช่น</h4><br>
+                <img src="https://cdn.discordapp.com/attachments/904730719618744370/904954614095441930/Screenshot_2021-11-02_114623.png"
+                    alt="" width="100%" class="box">
+            </div>
+            <div class="col-6 p-5 d-flex align-items-center justify-content-center">
+                <h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ซึ่งใน React การทำ href ก็ทำได้เหมือนกัน
+                    โดยเราจะเรียกว่า props นั่นเอง (มาจาก properties) props เป็นจุดที่ทำให้ React component นึง สามารถ
+                    <mark>pass</mark> ข้อมูลต่างๆ ไปอีก component นึงได้ <br><br>
+                    จากรูปจะเห็นได้ว่า
+                    <ul><br>
+                        <li>ParentComponent render ChildComponent โดยมี props message=“Hello World” ไปด้วย</li><br>
+                        <li>ChildComponent จะ render คำว่า And then I said, “Hello World” ให้ เพราะ ParentComponent
+                            ส่งคำว่า Hello World ผ่าน props ที่ชื่อ message นั่นเอง</li>
+                    </ul>
+                </h4>
+            </div>
+            <div class="col-6 p-5 d-flex align-items-center justify-content-center bg-light">
+                <img src="https://cdn.discordapp.com/attachments/904730719618744370/904957010259370025/Screenshot_2021-11-02_115552.png"
+                    alt="" width="100%" class="box">
+            </div>
+            <div class="col-12 bg-light p-5">
+                <h4 style="display: inline;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ด้วยเหตุนี้ ทำให้ React
+                    นั้นมีการไหลของข้อมูลเป็นการไหลไปทางเดียว คือ จากพ่อสู่ลูก นอกจากนี้ props
+                    ไม่จำเป็นต้องเป็นแค่ค่าตัวเลข หรือ string ธรรมดา มันอาจจะเป็น Object ทั้งก้อน หรือฟังก์ชันก็ได้
+                    ซึ่งแน่นอนว่ามีแค่ props คงไม่พอ บาง Component ก็อยากจะต้องมีการสร้าง data อะไรบางอย่าง
+                    ไว้ใช้ในตัวมันเอง หรือส่งไปให้ลูกๆ เช่นกัน และนี่ทำให้ </h4>
+                <h2 style="display: inline;">"state"</h2>
+                <h4 style="display: inline;"> เข้ามามีบทบาท</h4><br><br>
+                <h1 style="display: inline;">&nbsp;&nbsp;&nbsp;&nbsp;state</h1>
+                <h4 style="display: inline;"> นั้นเสมือนเป็น data ที่มีการใช้แค่ภายใน Component นั้นๆ อารมณ์คล้ายกับเป็น
+                    local variable ซึ่งการกระทำแก้ไขข้อมูลของ state นั้นจะทำผ่านฟังก์ชัน setState ของ React
+                    และ state นั้นจะเป็น JavaScript object ธรรมดา
+                    ดังนั้นหน้าตามันจะเป็นยังไงขึ้นอยู่กับว่าเราจะสร้างสรรค์ออกมายังไง
+                </h4><br><br>
+                <img src="https://cdn.discordapp.com/attachments/904730719618744370/904964566356738048/Screenshot_2021-11-02_122555.png"
+                    alt="" height="30%" class="box"><br><br>
+                <h4>จากรูปข้างบนนี้ ถ้ากดปุ่ม ก็จะมีการ set state ให้มีค่าการถูกกด (clicked) เป็น true</h4><br>
+                <h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ส่วนรูปข้างล่างนี้ เป็นตัวอย่างแสดงให้เห็นภาพว่า
+                    state เอาไปใช้ได้ยังไง โดยจะทำตัว CounterComponent
+                    ที่จะมีปุ่มกดที่จะเพิ่มเลขได้ และค่าเลขปัจจุบันก็จะถูกแสดงออกมา</h4><br>
+                <div class="row pb-5">
+                    <div class="col-6 d-flex align-items-center">
+                        <img src="https://cdn.discordapp.com/attachments/904730719618744370/904969663778283581/Screenshot_2021-11-02_124600.png"
+                            alt="" width="100%" class="box">
+                    </div>
+                    <div class="col-6 d-flex align-items-center">
+                        <h4>
+                            <mark>ลำดับการทำงาน</mark><br><br>
+                            <ul>
+                                <li>constructor จะใส่ค่า state ให้มี count เป็น 0</li><br>
+                                <li>ประกาศฟังก์ชัน handleClick ที่จะรอ event การกด หากมีการกด จะ set state ใหม่โดยให้ค่า
+                                    count เพิ่มขึ้นจากเดิมไป 1</li><br>
+                                <li>render() จะ render component มา โดยจะแสดงจำนวนเลขปัจจุบัน และมีปุ่ม</li><br>
+                                <li>โดยเลขปัจจุบัน จะแสดงผ่านตัวแปร this.state.count (ถ้าไล่ดีๆ มันก็คือไล่ JavaScript
+                                    object ธรรมดาเลย ไม่มีอะไรแปลก)</li><br>
+                                <li>และปุ่มจะผูกกับฟังก์ชัน handleClick ผ่าน onClick</li><br>
+                                <li>ดังนั้นเมื่อกดปุ่ม ก็จะเรียกฟังก์ชัน handleClick ที่จะเพิ่มค่า count ไป 1 ผ่านการ
+                                    set state</li><br>
+                                <li>และ view จะอัพเดตหน้าตา เมื่อ state เปลี่ยน</li>
+                            </ul>
+                        </h4>
+                    </div>
+                </div>
+
+                <div class="card text-lg-center border-primary m-3">
+                    <div class="card-header">
+                        <h3>สรุป</h3>
+                    </div>
+                    <div class="card-body">
+                        <h4>
+                            <mark>props มาจากด้านบน,</mark> ส่วน state ใช้ภายใน
+                        </h4>
+                    </div>
+                </div>
+                <div class="card text-lg-center border-danger m-3">
+                    <div class="card-header">
+                        <h3>แล้วเราสามารถโยน state เข้า props ของ component ลูกได้มั้ย ?</h3>
+                    </div>
+                    <div class="card-body">
+                        <h4>
+                            <h4><u>ตอบ</u> : ได้ แต่ตัวลูกไม่สามารถแก้ไข state ของตัวพ่อได้ เพราะมันเป็นแค่ props
+                                ตัวนึง</h4>
+                        </h4>
+                    </div>
+                </div><br>
+                <h4>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;แม้ว่า React จะมี state
+                    ให้เราเพื่อที่เราจะโยนของลงไปให้
+                    Component ต่างๆ แล้ว
+                    แต่ถ้าแอพเริ่มใหญ่ขึ้นการจัดการ state ก็จะยากขึ้นและงงมากขึ้น จึงมี architecture ต่างๆ
+                    มาช่วยให้เราจัดการ state ได้ง่ายขึ้น เช่น Flux, Redux, MobX เป็นต้น
+                </h4>
+            </div>
+            <div class="col-6 p-5 d-flex align-items-center justify-content-center">
+                <h2>Flux คืออะไร ?</h2>
+            </div>
+            <div class="col-6 p-5 bg-light">
+                <h4>Data Flow Pattern เเบบหนึ่งที่ถูกเเบบโดยทีมผู้พัฒนา Facebook โดยเจ้า Flux
+                    ออกเเบบมาเพื่อใช้เเก้ไขปัญหาเรื่องความซับซ้อนในการเขียนโค้ด Flux เเละในองค์กรต่าง ๆ มักจะหยิบ Flux
+                    มาใช้ควบคู่กับ React ค่อนข้างบ่อยมาก</h4>
+            </div>
+
+            <!-- <div class="col-6 p-5 bg-light">
+                <img src="https://cdn.discordapp.com/attachments/904730719618744370/904964566356738048/Screenshot_2021-11-02_122555.png"
+                    alt="" width="90%" class="box">
+            </div> -->
+            <!-- </div> -->
+            <!-- </div> -->
         </div>
+        <br><br><br id=".."><br><br>
     </div>
 </body>
 
