@@ -98,20 +98,21 @@
                             <button type="button" class="btn btn-dark box">เตรียมตัวก่อนเขียน React</button>
                         </a>
                     </div>
-                    <!-- <div class="row">
-                        <div class="col m-5 text-center">
+                    <div class="row">
+                        <div class="col m-5 text-right">
                             <a href="">
-                            <button type="button" class="btn btn-dark box">ใช้ React เพื่อเขียนอะไร ?</button>
+                                <button type="button" class="btn btn-dark box">สิ่งที่ควรรู้สำหรับการเขียน
+                                    React</button>
                             </a>
                         </div>
-                    </div> -->
-                    <div class="row">
+                    </div>
+                    <!-- <div class="row">
                         <div class="col m-5 text-right">
                             <a href="#friend">
                                 <button type="button" class="btn btn-dark box">คอนเซปต์และเพื่อนๆของ React</button>
                             </a>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
                 <div class="col-4">
                     <br><br><br><br>
@@ -127,9 +128,9 @@
                     <br><br><br><br><br><br>
                     <div class="row">
                         <div class="col m-5 text-left">
-                            <!-- <a href=""> -->
-                            <button type="button" class="btn btn-dark box">React Livecycle</button>
-                            <!-- </a> -->
+                            <a href="#cycle">
+                                <button type="button" class="btn btn-dark box">React Lifecycle</button>
+                            </a>
 
                         </div>
                     </div>
@@ -152,7 +153,7 @@
         </div>
     </section>
     <br><br id="what"><br><br>
-    <div class="container-fluid">
+    <div class="container">
         <div class="row">
             <div class="col-12 text-center mt-4">
                 <h2>ก่อนที่เราจะไปทำความรู้จักกับ REACT ว่ามันคืออะไร เราจะพามาดูกันก่อนว่า<br>
@@ -490,7 +491,7 @@
         <br><br><br id="friend"><br><br>
         <div class="row">
             <div class="col-12 text-center mb-3">
-                <h2>topic</h2>
+                <h2>สิ่งที่ควรรู้สำหรับการเขียน React</h2>
                 <hr>
             </div>
             <div class="col-6 bg-light text-center d-flex align-items-center justify-content-center">
@@ -593,6 +594,10 @@
                 </h4><br><br>
                 <img src="https://cdn.discordapp.com/attachments/904730719618744370/904964566356738048/Screenshot_2021-11-02_122555.png"
                     alt="" height="30%" class="box"><br><br>
+                <!-- <div class="col-6 p-5 bg-light">
+                <img src="https://cdn.discordapp.com/attachments/904730719618744370/904964566356738048/Screenshot_2021-11-02_122555.png"
+                    alt="" width="90%" class="box">
+            </div> -->
                 <h4>จากรูปข้างบนนี้ ถ้ากดปุ่ม ก็จะมีการ set state ให้มีค่าการถูกกด (clicked) เป็น true</h4><br>
                 <h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ส่วนรูปข้างล่างนี้ เป็นตัวอย่างแสดงให้เห็นภาพว่า
                     state เอาไปใช้ได้ยังไง โดยจะทำตัว CounterComponent
@@ -621,7 +626,7 @@
                     </div>
                 </div>
 
-                <div class="card text-lg-center border-primary m-3">
+                <!-- <div class="card text-lg-center border-primary m-3">
                     <div class="card-header">
                         <h3>สรุป</h3>
                     </div>
@@ -641,32 +646,258 @@
                                 ตัวนึง</h4>
                         </h4>
                     </div>
-                </div><br>
+                </div><br> -->
                 <h4>
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;แม้ว่า React จะมี state
                     ให้เราเพื่อที่เราจะโยนของลงไปให้
                     Component ต่างๆ แล้ว
                     แต่ถ้าแอพเริ่มใหญ่ขึ้นการจัดการ state ก็จะยากขึ้นและงงมากขึ้น จึงมี architecture ต่างๆ
                     มาช่วยให้เราจัดการ state ได้ง่ายขึ้น เช่น Flux, Redux, MobX เป็นต้น
-                </h4>
+                </h4><br><br>
             </div>
             <div class="col-6 p-5 d-flex align-items-center justify-content-center">
                 <h2>Flux คืออะไร ?</h2>
             </div>
             <div class="col-6 p-5 bg-light">
-                <h4>Data Flow Pattern เเบบหนึ่งที่ถูกเเบบโดยทีมผู้พัฒนา Facebook โดยเจ้า Flux
+                <h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;คือ Data Flow Pattern
+                    เเบบหนึ่งที่ถูกเเบบโดยทีมผู้พัฒนา
+                    Facebook โดยเจ้า Flux
                     ออกเเบบมาเพื่อใช้เเก้ไขปัญหาเรื่องความซับซ้อนในการเขียนโค้ด Flux เเละในองค์กรต่าง ๆ มักจะหยิบ Flux
-                    มาใช้ควบคู่กับ React ค่อนข้างบ่อยมาก</h4>
+                    มาใช้ควบคู่กับ React ค่อนข้างบ่อยมาก <br><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;โดย Flux
+                    นั้นออกเเบบมาเพื่อเเก้ไขปัญหาของเจ้าใหญ่อย่าง MVC
+                    framework เนื่องจากปัญหาของ MVC นั้นคือ กรณีที่ Project เริ่มใหญ่ขึ้น ความซับซ้อนก็เริ่มมากขึ้น
+                    ส่วนของ Model เยอะตามการเข้ามาเเก้ไขก็ลำบากขึ้น ดังนั้นเเล้ว Flux จึงออกเเบบให้กลายเป็น
+                    Unidirectional นั่นเอง</h4>
+            </div>
+            <div class="col-6 p-5 bg-light">
+                <h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;คือ State Management (ตัวจัดการ State) นั่นเอง
+                    และมันก็ไม่จำเป็นว่าจะต้องใช้กับ React เท่านั้น มันเป็น Concept ฉะนั้น
+                    มันสามารถประยุกต์ใช้ได้หมด เช่น Angular หรือ Vue
+                </h4>
+            </div>
+            <div class="col-6 p-5 d-flex align-items-center justify-content-center">
+                <h2>Redux คืออะไร ?</h2>
+            </div>
+            <div class="col-6 p-5 d-flex align-items-center justify-content-center">
+                <h2>MobX คืออะไร ?</h2>
+            </div>
+            <div class="col-6 p-5 bg-light">
+                <h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;เป็นหลักการที่ใช้ Observable Pattern ในการเก็บ State
+                    แทนการ Pass จาก Root ลงไปยัง Child Component เหมือน Flux หรือ Redux
+                </h4>
+            </div>
+            <div class="col-12 text-center mt-5"><br><br>
+                <h1>Stateless Component คืออะไร ?</h1>
+                <hr><br>
+            </div>
+            <div class="col-12">
+                <h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Stateless Component คือ Component ที่ไม่มีการใช้
+                    State ใดๆ ใช้แต่ props เท่านั้น และเขียนมันออกมาในลักษณะการเขียน function ที่ return HTML ไป
+                </h4><br>
+                <img src="https://cdn.discordapp.com/attachments/904730719618744370/905017254297600030/Screenshot_2021-11-02_155441.png"
+                    alt="" class="box" width="auto" height="80%"><br><br>
+                <h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ซึ่งการเขียน Stateless Component
+                    เหมาะสำหรับกรณีที่เราไม่ต้องการ state เลย ไม่ต้องทำ lifecycle hook และการทำให้กลายเป็น
+                    Presentational Component ของจริง คือมีหน้าที่โชว์อย่างเดียว เราจะรู้เลยว่าถ้า logic จะมีปัญหา
+                    มันก็จะมาจากที่อื่น ไม่น่าจะมาจากที่นี่ เพราะมันโชว์เป็นอย่างเดียว (หรือก่อให้เกิดการเรียก action
+                    อย่างเดียว หากส่ง function ลงมา)</h4>
             </div>
 
-            <!-- <div class="col-6 p-5 bg-light">
-                <img src="https://cdn.discordapp.com/attachments/904730719618744370/904964566356738048/Screenshot_2021-11-02_122555.png"
-                    alt="" width="90%" class="box">
-            </div> -->
+
             <!-- </div> -->
             <!-- </div> -->
         </div>
-        <br><br><br id=".."><br><br>
+        <br><br><br id="cycle"><br><br>
+        <div class="row">
+            <div class="col-12 text-center mb-3 mt-5">
+                <h2>React Lifecycle</h2>
+                <hr>
+            </div>
+            <div class="col-12">
+                <h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;การเกิดและดับไปของ Component ใน React
+                    นั้นเราจะเรียกมันว่า Lifecycle ซึ่งถ้าเราเข้าใจส่วนนี้ได้
+                    เราก็สามารถแทรกโค้ดเพื่อให้ถูกรันเฉพาะเมื่อเกิดในจังหวะต่างๆใน cycle ดังกล่าวได้
+                    โดยการแทรกโค้ดนั้น เพียงเขียนฟังก์ชันตามชื่อที่มีอยู่ใน Lifecycle ใน component นั้นเป็นอันจบ
+                </h4><br>
+            </div>
+            <div class="col-12 text-center">
+                <!-- <div class="card" style="width: 50%;">
+                    <div class="card-header">
+                        React Lifecycle
+                    </div>
+                    <div class="card-body">
+                        <img src="" alt="">
+                    </div>
+                </div> -->
+                <img src="https://cdn-images-1.medium.com/max/1600/1*mkeF_H0KllFDOHcQlxmjcQ.png" alt="" class="box"
+                    width="50%">
+            </div>
+            <div class="col-12 mt-4">
+                <h4>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;จากรูปข้างบนนี้ อธิบายได้ว่า
+
+                    <ol><br>
+                        <li>ครั้งแรก component จะโดน render ผ่านฟังก์ชัน ReactDOM.render() ที่จะ render component
+                            ทั้งหมด
+                            หากใน component มี component ย่อย ก็จะ render อันย่อยด้วย ไล่ render ไป</li><br>
+                        <li>จังหวะแรก จะมีการ getDefaultProps() ที่จะดึงค่า props ที่เป็น default มาก่อนทั้งหมด
+                        </li><br>
+                        <li>และก็จะ getDefaultState() เหมือนกัน</li><br>
+                        <li>ต่อมาจะเป็นจุดสำคัญ คือในจังหวะที่ตัว DOM ที่กำลังจะ render มันจะถูกแปะใน DOM หลัก
+                            มันคือจังหวะของ componentWillMount() ซึ่งเราสามารถมา hook cycle
+                            นี้เพื่อทำอะไรบางอย่างได้
+                            เช่น เริ่มยิง AJAX ขอข้อมูลจาก API เป็นต้น</li><br>
+                        <li>ถัดจากนั้น เมื่อ DOM ถูกแปะใน DOM หลักแล้ว ก็จะทำการ render() ตัว DOM ขึ้นมา
+                            ตามที่เราเขียนไป
+                        </li><br>
+                        <li>เมื่อ render() เสร็จ ตอนนี้ DOM นั้นก็จะแปะอยู่ในเว็บอย่างสมบูรณ์แล้ว ก็จะเป็นจังหวะของ
+                            componentDidMount() ที่เราสามารถแตะต้อง DOM ที่เราเขียนได้แล้ว เช่น หากเราอยากใช้ library
+                            ของ
+                            jQuery เราก็มาใช้มันในนี้เพราะ DOM จริงๆ มันถือกำเนิดแล้ว (ก่อนหน้านั้น DOM
+                            มันกำลังจะเกิดเฉยๆ)</li><br>
+                        <li>หลังจากนั้น อาจจะเกิดเหตุการณ์เช่น props จากด้านบนเปลี่ยนค่า หรือเปลี่ยน props ผ่าน
+                            setProps()
+                            จังหวะที่ props เปลี่ยนนั้นก็จะเป็นช่วงของ componentWillReceiveProps(nextProps)
+                            คือเป็นจังหวะที่
+                            Component จะได้รับ props อันใหม่</li><br>
+                        <li>หรือหากไม่เกิดการเซ็ต props ใหม่ แต่เกิดการเซ็ต state ผ่าน setState()
+                            จังหวะนั้นก็จะกระโดดมาที่
+                            shouldComponentUpdate(nextProps, nextState) ส่วนนี้เป็นส่วนที่สำคัญมาก เพราะว่า หาก props
+                            เปลี่ยนหรือ state เปลี่ยน มันจะโดนมาอยู่ที่จุดนี้ ซึ่งเป็นจุดที่ Virtual DOM ของ React
+                            มีบทบาทมาก และความเร็วของมันเกิดจากจุดนี้ คือมันจะประเมินว่า component
+                            นี้ต้องมีการอัพเดตหน้า view หรือไม่ โดยมีการใช้ Virtual DOM ในการดู</li><br>
+                        <li>หาก Virtual DOM ตัดสินใจจะอัพเดต view ละ ก็จะไปที่ componentWillUpdate(nextProps, nextState)
+                            เลย
+                        </li><br>
+                        <li>และก็จะสั่ง render() อีกครั้ง เพื่อ rerender ใหม่</li><br>
+                        <li>และไปที่ componentDidUpdate(prevProps, prevState) เพื่อบอกว่าการอัพเดต component เสร็จแล้ว
+                        </li><br>
+                        <li>แล้วก็จะกลับไปสู่จุดรอ และเป็นวังวนไป หากมี state หรือ props เปลี่ยน ก็จะไปทำตามข้อ 7
+                            หรือ 8
+                            ใหม่</li><br>
+                        <li>หาก component นี้เกิดต้องจากลา ก็จะไปสู่ componentWillUnmount() ที่จะทำการ unmount DOM
+                            นี้ออกจาก DOM หลักออกไป แล้วก็ตายจากไป</li><br>
+                    </ol>
+                </h4>
+                <h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;การทำความรู้จักว่า Lifecycle
+                    มีอะไรบ้างนั้นช่วยให้เราสามารถเขียนโค้ดไป hook (เกาะ, เกี่ยว) กับช่วง
+                    Lifecycle ที่ต้องการได้ เช่น อยากจะยิง API ขอข้อมูล ก็ไปยิงตั้งแต่จังหวะที่จะโดน mount เลยสิ
+                    (componentWillMount()) หรือจะต้อง init Google Map ก็ต้องรอให้ DOM จริงๆ เกิดขึ้นก่อน ถึงจะ init ได้
+                    (componentDidMount()) อะไรแบบนี้ หรือบางเคส เราตัดสินใจแทน Virtual DOM ได้ว่า ถ้าอีค่านี้เปลี่ยน
+                    ยังไง view ก็ต้องเปลี่ยน ก็ไปเขียน hook shouldComponentUpdate() แล้วตัดสินใจให้เลยก็ได้ ก็จะ
+                    optimize ประสิทธิภาพไปได้อีก</h4>
+                <div class="card" style="width: 30%;">
+                    <div class="card-header text-center">
+                        ตัวอย่างการทำ lifecycle hook แบบคร่าวๆ
+                    </div>
+                    <div class="card-img-bottom">
+                        <img src="https://cdn.discordapp.com/attachments/904730719618744370/905031910873530408/Screenshot_2021-11-02_165329.png"
+                            alt="" width="100%">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br><br><br id="dom"><br><br>
+        <div class="row">
+            <div class="col-12 text-center mt-3">
+                <h2>สมองของ React ทำมาจากอะไร</h2>
+                <hr><br>
+            </div>
+            <div class="col-12">
+                <h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;สงสัยกันไหม ว่าทำไม React ถึงทำงานได้เร็วมากๆ
+                    นั่นก็เพราะตัว React
+                    นั้นมีการเปรียบเทียบการเปลี่ยนแปลงของ View จากการใช้ Virtual DOM</h4>
+                <h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;อย่างที่ทราบกันว่า เวลาเรามี HTML มา Browser ก็จะ
+                    render มันออกมาให้เรา แต่ว่าตัว element ต่างๆ ใน HTML นั้นสามารถถูก access ได้เพื่อทำอะไรบางอย่าง
+                    เช่น CSS มา access เพื่อ styling ให้มัน, JavaScript มา access เพื่อแปะ event ให้มัน ดังนั้น ตัว
+                    Browser มันจะไม่ได้แค่ render HTML ออกมาเป็นหน้าตาเฉยๆ แต่ยังแปลงตัว HTML ที่เราเขียนเนี่ย
+                    ไปเป็นต้นไม้ต้นนึง ที่เราเรียกมันว่า DOM (Document Object Model) Tree</h4><br>
+                <img src="https://cdn-images-1.medium.com/max/1600/1*Z32YHoZNEgAHCaozilfDIA.png" alt=""><br>
+                <h4 style="display: inline;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<mark>ตัว DOM
+                        ไม่ได้ทำงานเรร็วเสมอไปทุกครั้ง </mark>
+                    สมมติถ้าหน้า View เกิดมีการอัพเดต เช่น มี element
+                    โดนถอนออก หรือมีการแก้ค่าข้างใน DOM ก็จะต้องแก้ต้นไม้ใน node ที่ต้องการอัพเดต แม้ว่า DOM มันจะหา
+                    node นั้นได้เร็วเพราะเป็นต้นไม้ แต่หากมีการอัพเดตแล้ว node นั้นมีลูกเยอะๆ ก็จะส่งผลกระทบหนักมาก
+                    ลองนึกภาพว่าถ้าขยับ node นึง 10 pixel แต่จริงๆ แล้วทุก node ลูกนั้นๆ ต้องขยับตามด้วย
+                    และดันมีเป็นพันๆ
+                    node แน่นอนว่าจะส่งผลให้การทำงานมันจะช้ามาก เพราะต้องลงไปไล่แก้ <br><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;อีกทั้ง DOM นั้นก็ไม่เก่งเรื่องการสร้าง Dynamic
+                    View ที่มีการปรับเปลี่ยนค่าใน DOM ตลอดด้วย ทำให้เมื่อหน้า View เริ่มมีความ dynamic สูงขึ้น
+                    โดยเฉพาะใน SPA ทั้งหลาย DOM จึงส่อถึงปัญหาของประสิทธิภาพอย่างชัดเจนมากขึ้น
+                    ด้วยปัญหาเหล่านี้เลยมีการเสนอแนวคิดนึงว่า เรียกว่า </h4>
+                <h3 style="display: inline;">"Virtual DOM"</h3>
+                <h4 style="display: inline;"> ขึ้นมา</h4><br><br>
+                <h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Virtual DOM บอกว่า เราจะ copy DOM ทั้งต้นมาด้วยเลย
+                    โดยเรียกมันว่า Virtual DOM เวลาที่ View อยากจะอัพเดตอะไรก็ตาม มันจะมาทำใน Virtual DOM
+                    ก่อน เมื่อแก้ใน Virtual DOM เสร็จ หากพบว่ามี node ที่ View ต้องเปลี่ยนจริงๆ ก็จะทำการ patch
+                    DOM จริงๆ ให้ แต่คราวนี้เขาจะรู้ละว่ามี node ไหนที่ต้อง patch จริงๆ เพราะ View เปลี่ยน ก็จะไป patch
+                    DOM จริงเฉพาะที่จะเปลี่ยน หน้าตาก็จะเปลี่ยน ซึ่งมันจะมี algorithm ในการตรวจเช็คว่ามีจุดไหนใน DOM
+                    จริงกับ Virtual DOM บ้างที่แตกต่าง</h4><br>
+                <div class="col-12 text-center">
+                    <img src="https://cdn-images-1.medium.com/max/1600/1*jb7rWNWkjLcGri_GZhxBGA.png" alt="" width="50%">
+                </div><br>
+                <h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Virtual DOM ด้านบนจะประเมินว่า node ไหน view
+                    มีการอัพเดตบ้าง แล้วจึงเทียบกับ DOM จริงๆ แล้วทำการอัพเดตให้ตรงกัน
+
+                    ซึ่งผลของการทำ Virtual DOM มีข้อดี คือเราสามารถ specific จุดที่ต้องแก้ไขได้เลยจริงๆ
+                    เพราะเราประเมินมาชั้นนึงแล้วว่ามีส่วนไหนต้องอัพเดตบ้าง ทำให้ไม่เสียเวลากับการที่ต้องแก้ DOM
+                    จุดที่ไม่จำเป็นต้องแก้จริงๆ
+                    นั่นทำให้ React จึงโดดเด่นเรื่องประสิทธิภาพเอาเรื่อง เพราะมีการใช้ Virtual DOM นี่แหละ</h4>
+            </div>
+        </div>
+        <br><br><br id="goodbad"><br><br>
+        <div class="row">
+            <div class="col-12 text-center">
+                <h3><mark>ข้อดี และข้อเสีย ของ React</mark></h3>
+                <hr><br>
+            </div>
+            <div class="col-12">
+                <h4>ข้อดีของ React</h4>
+                <ul>
+                    <li>เทรนด์เว็บไซต์เริ่มกลายเป็น API – เว็บไซต์ในปัจจุบันมี API กันเยอะมาก (เว็บใหญ่ ๆ เช่น Facebook,
+                        Google, Twitter etc. ก็มี API ครบกันหมดแล้ว) เพราะฉะนั้นถ้าวันนี้เรายังทำเว็บที่คุยกับ API
+                        ไม่ได้ เราจะเสียเปรียบมากในอนาคตครับ</li>
+                    <li>Concept เข้าใจง่าย – เรียนรู้ตัว React เองง่ายมาก และเครื่องมือที่ช่วยเรียนรู้เยอะมาก ๆ</li>
+                    <li>อนาคตไกล – React เกิดมาหลายปีแล้ว และยังคงมีคนให้ความสนใจเยอะ
+                        เพราะฉะนั้นเรียนตอนนี้ยังใช้ได้อีกหลายปีแน่นอน</li>
+                    <li>เครื่องมือทำงานด้วยเยอะ – หลายคนอาจจะกลัวว่าเราต้องศึกษาเครื่องมือเพิ่มเติมมากมายเพื่อใช้ React
+                        แบบเต็มที่ แต่จริง ๆ เรียนรู้แค่ React ก็ทำเว็บได้แล้ว</li>
+                    <li>ทำแอพมือถือได้ด้วย – เครื่องมือหนึ่งที่ทำให้ผมมาสนใจ React คือ React Native ซึ่งเป็นการเขียน
+                        JavaScript แล้วนำมาแปลงเป็น App แบบ Native ได้ทั้งบน Android และ iOS เครื่องมือนี้พัฒนาโดยทีม
+                        Facebook เองเลย</li>
+                    <li>คนใช้เยอะ หาโค้ดให้ศึกษาง่าย – มี Best Practice จากเว็บไซต์จริงเยอะแยะมากมายให้ศึกษา
+                        เพราะเว็บใหญ่ก็ใช้กันเยอะ ลองดูได้ที่ ลิสต์เว็บที่ใช้ React บางส่วน (ย้ำว่าบางส่วนนะครับ)</li>
+                    <li>Community แข็งแกร่งมาก – ถ้ามีคำถามไม่ต้องกลัวว่าจะไม่มีคนตอบ เพราะกระแสแรงทั้งในไทย (ReactJS
+                        Developers Thailand ซึ่งเป็นทีมงานเดียวกับที่จัดงาน React Bangkok) และต่างประเทศ ล่าสุดผมกดบัตร
+                        Meetup React Melbourne ไม่ทัน เพราะประกาศแปปเดียวยอดคนเข้าไป 200+ แล้ว</li>
+                </ul>
+            </div>
+            <div class="col-12">
+                <ul>
+                    <li>Documentation ยังไม่ดี – Documentation บนเว็บหลักแอบอ่านยากไปหน่อย
+                        แต่เดี๋ยวจะแนะนำเว็บที่อธิบายง่าย ๆ ที่ผมใช้ตอนเรียน React</li>
+                    <li>ต้องรู้ JavaScript ในระดับหนึ่ง – คนที่มาจากภาษาอื่นเช่น PHP อาจจะต้องมาเรียนรู้ในส่วนนี้</li>
+            </div>
+        </div>
+        <br><br><br id="work"><br><br>
+        <div class="row">
+            <div class="col-12 text-center">
+                <h3>React เหมาะกับงานแบบไหน</h3>
+                <hr><br>
+            </div>
+            <div class="col-12">
+                <ul>
+                    <li>งานที่มีโค้ดซับซ้อน React สามารถแก้ไขปัญหาตรงนี้ได้ เนื่องจากหั่นเป็นท่อนๆ ทำให้ง่ายต่อการจัดการ
+                    </li>
+                    <li>งานที่ต้องการโค้ดที่จัดการได้ง่าย และมีการแชร์ Component กันหลายจุด – เพราะ React
+                        แบ่งโค้ดออกเป็นส่วน ๆ ดูเป็นระเบียบมาก</li>
+                    <li>งานที่เผื่อต่อยอดไปสู่ Mobile App</li>
+                    <li>ทีมงานที่มีความรู้เรื่อง JavaScript อยู่แล้วก็สามารถปรับเปลี่ยนได้เลย</li>
+                    <li>งานที่ไม่ตต้องใช้ IE8 เพราะ React เลิกรองรับ IE8 ไปแล้ว</li>
+                </ul>
+            </div>
+        </div>
     </div>
 </body>
 
