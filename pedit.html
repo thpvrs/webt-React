@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REACT</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree&family=Roboto&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <style>
+        * {
+            font-family: 'Roboto', sans-serif;
+            font-family: 'Bai Jamjuree', sans-serif;
+            /* text-align: justify; */
+
+        }
+
+        mark {
+            background: greenyellow;
+        }
+
+        body {
+            /* background: #0AD0EF; */
+            /* background: whitesmoke; */
+            background-color: antiquewhite;
+        }
+
+        section {
+            background-color: white;
+            /* height: 100vh; */
+        }
+
+        hr {
+            width: 80%;
+            size: 3;
+            color: black;
+        }
+
+        section::before {
+            content: "";
+            width: 100%;
+            height: 100vh;
+            background: #232323;
+            transform: skewY(-15deg);
+            display: block;
+            position: absolute;
+            top: -300px;
+            left: 0;
+        }
+
+        .circle {
+            border-radius: 50%;
+        }
+
+        .box {
+            border-radius: 25px;
+        }
+
+        .bgwhite {
+            height: 100vh;
+            background: white;
+            /* align-items: stretch; */
+        }
+    .box1 {            border-radius: 25px;
+}
+    </style>
+</head>
+
+<body>
+    <section><br>
+        <div class="container-fluid">
+            <nav class="navbar navbar-light bg-light m-5" style="border-radius: 15px;">
+                <a class="navbar-brand" href="#">
+                    <img src="/docs/4.0/assets/brand/bootstrap-solid.svg" width="30" height="30"
+                        class="d-inline-block align-top" alt="">
+                    Bootstrap
+                </a>
+            </nav>
+            <div class="row">
+                <div class="col-4">
+                    <br><br><br>
+                    <div class="row">
+                        <div class="col m-5 text-right">
+                            <a href="#what">
+                                <button type="button" class="btn btn-dark box">React คืออะไร ?</button>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col m-5 text-center">
+                        <a href="#before">
+                            <button type="button" class="btn btn-dark box">เตรียมตัวก่อนเขียน React</button>
+                        </a>
+                    </div>
+                    <div class="row">
+                        <div class="col m-5 text-right">
+                            <a href="">
+                                <button type="button" class="btn btn-dark box">สิ่งที่ควรรู้สำหรับการเขียน
+                                    React</button>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- <div class="row">
+                        <div class="col m-5 text-right">
+                            <a href="#friend">
+                                <button type="button" class="btn btn-dark box">คอนเซปต์และเพื่อนๆของ React</button>
+                            </a>
+                        </div>
+                    </div> -->
+                </div>
+                <div class="col-4">
+                    <br><br><br><br>
+                    <div class="row">
+                        <div>
+                            <img class="circle"
+                                src="https://iamnet.me/wp-content/uploads/2016/12/addthis-react-flux-javascript-scaling.png"
+                                alt="React" width="100%">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <br><br><br><br><br><br>
+                    <div class="row">
+                        <div class="col m-5 text-left">
+                            <a href="#cycle">
+                                <button type="button" class="btn btn-dark box">React Lifecycle</button>
+                            </a>
+
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col m-5 text-center">
+                            <!-- <a href=""> -->
+                            <button type="button" class="btn btn-dark box">สมองของ React ทำมาจากอะไร</button>
+                            <!-- </a> -->
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col m-5 text-left">
+                            <!-- <a href=""> -->
+                            <button type="button" class="btn btn-dark box">React เหมาะกับงานแบบไหน</button>
+                            <!-- </a> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <br><br id="what"><br><br>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center mt-4">
+                <h2>ก่อนที่เราจะไปทำความรู้จักกับ REACT ว่ามันคืออะไร เราจะพามาดูกันก่อนว่า<br>
+                    การทำเว็บแบบเดิมที่เราทำมันต่างจากการทำเว็บแบบใหม่ด้วย React ยังไง</h2>
+            </div>
+            <hr>
+            <div class="row mt-5">
+                <!-- <div class="col-5 pl-5 align-items-center"></div> -->
+                <div class="col-5 pl-5">
+                    <div class="card">
+                        <div class="card-header text-center">
+                            <h4>การทำเว็บไซต์แบบดั้งเดิม</h4>
+                        </div>
+                        <img class="card-img-top"
+                            src="https://www.designil.com/wp-content/uploads/2017/07/how-web-work-designil.webp"
+                            alt="เว็บดั้งเดิม">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;การทำเว็บไซต์ด้วยเทคนิคเดิม คือ HTML,
+                                CSS,
+                                JavaScript, PHP (หรือภาษา
+                                Backend ภาษาใดภาษาหนึ่ง) ส่วนใหญ่ “การทำงานทั้งหมดจะอยู่ที่ Server”
+                                สามารถสรุปลำดับการทำงานได้ดังนี้
+                            </h5>
+                            <!-- <p class="card-text">&nbsp;&nbsp;&nbsp;&nbsp;การทำเว็บไซต์ด้วยเทคนิคเดิม คือ HTML, CSS, JavaScript, PHP (หรือภาษา
+                                Backend ภาษาใดภาษาหนึ่ง) ส่วนใหญ่ “การทำงานทั้งหมดจะอยู่ที่ Server” ดังรูปข้างบน</p> -->
+                            <p class="card-text">
+                                1. User เข้าเว็บไซต์เรา https://www.designil.com ก็จะส่งไปบอก Server <br>
+                                2. Server (PHP) จะประมวลผลผ่านภาษา Backend ว่า User เข้าหน้านี้แล้วต้องให้อะไรบ้าง เช่น
+                                ต้องการบทความ 10 บทความล่าสุด <br>
+                                3. Server นำข้อมูลที่เก็บไว้ออกมาจาก Database (เช่น MySQL) แล้ววางลงไปในเทมเพลต HTML
+                                ที่เตรียมไว้ <br>
+                                4. Server ส่ง HTML กลับไปหา User <br>
+                            </p>
+                            <!-- <p class="card-text"><small class="text-muted">Last updated 3 mins
+                                    ago</small></p> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="col-7 pr-5">
+                    <div class="card">
+                        <div class="card-header text-center">
+                            <h4>การทำเว็บไซต์แบบใหม่</h4>
+                        </div>
+                        <img class="card-img-top"
+                            src="https://www.designil.com/wp-content/uploads/2017/07/how-modern-web-work.webp"
+                            alt="เว็บที่เขียนโดย React">
+                        <div class="card-body">
+                            <!-- <h5 class="card-title">
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ไอเดียนี้เมื่อก่อนเราเรียกว่า AJAX นั่นเอง
+                                ก็คือ ใช้ JavaScript ส่ง Request ไปขอข้อมูลจาก Server แล้ว Server
+                                ตอบกลับมาเป็นข้อมูลอย่างเดียว เราค่อยใช้ JavaScript เอาข้อมูลมาแสดงอีกที
+                                อย่างไรก็ตาม พอข้อมูลถูกส่งจาก Server มาให้ Web Browser แล้ว ก็เกิดปัญหาว่า
+                                “แล้วจะจัดการข้อมูลบน Web Browser อย่างไร” ซึ่งเมื่อก่อนไม่มี Library
+                                คอยช่วยเหลือด้านการแสดงผล เลยทำให้โค้ดพันกันมั่วไปหมด <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;JavaScript Framework สมัยใหม่ เช่น
+                                React ก็เลยออกมาเพื่อช่วยให้เราจัดการเรื่องการดึงข้อมูล
+                                การแสดงผลข้อมูลในเว็บให้ง่ายขึ้นนั่นเองครับ</h5> -->
+                            <h5 class="card-title">
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                การทำเว็บไซต์แบบใหม่ คือ ใช้ JavaScript ส่ง Request ไปขอข้อมูลจาก Server แล้ว Server
+                                ตอบกลับมาเป็นข้อมูลอย่างเดียว เราค่อยใช้ JavaScript เอาข้อมูลมาแสดงอีกที
+                                อย่างไรก็ตาม พอข้อมูลถูกส่งจาก Server มาให้ Web Browser แล้ว ก็เกิดปัญหาว่า
+                                “แล้วจะจัดการข้อมูลบน Web Browser อย่างไร” ซึ่งเมื่อก่อนไม่มี Library
+                                คอยช่วยเหลือด้านการแสดงผล เลยทำให้โค้ดพันกันมั่วไปหมด <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;JavaScript Framework สมัยใหม่ เช่น
+                                React ก็เลยออกมาเพื่อช่วยให้เราจัดการเรื่องการดึงข้อมูล
+                                การแสดงผลข้อมูลในเว็บให้ง่ายขึ้น
+                            </h5>
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <p class="card-text">
+                                            1. User เข้าเว็บไซต์เรา<br>
+                                            2. โหลด HTML, CSS, JS ขึ้นมาก่อน แล้ว JavaScript ค่อยขอบทความล่าสุดจาก
+                                            Server<br>
+                                            3. Server ได้รับคำขอ ก็ส่งไปขอข้อมูลจากฐานข้อมูลอีกที<br>
+                                        </p>
+                                    </div>
+                                    <div class="col-6">
+                                        <p class="card-text">
+                                            4. Database ส่งข้อมูลกลับมาให้ Server<br>
+                                            5. Server ส่งข้อมูลกลับไปให้ Browser ทาง API โดยส่วนใหญ่จะส่งเป็น JSON เพราะ
+                                            JavaScript สามารถนำไปใช้งานต่อได้ง่าย<br>
+                                            6. JavaScript นำข้อมูลที่ได้รับมาจัดการแสดงผลบนหน้าเว็บไซต์<br>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br><br><br id=""><br><br>
+        <div class="row">
+            <div class="col-4">
+                <img src="..." alt="สงสัย" width="100%">
+            </div>
+            <div class="col-8">
+              <div>
+                  <h4 align="justify" style="display: inline;">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                      React เป็น JavaScript library หรือจะเรียกว่าเป็น Javascript Framework
+                      ที่ใช้สำหรับสร้าง
+                      user interface ที่ให้เราสามารถเขียนโค้ดในการสร้าง UI
+                      ที่มีความซับซ้อนแบ่งเป็นส่วนเล็กๆออกจากกันได้
+                      ซึ่งแต่ละส่วนสามารถแยกการทำงานออกจากกันได้อย่างอิสระ และทำให้สามารถนำชิ้นส่วน UI
+                      เหล่านั้นไปใช้ซ้ำได้อีก หรือจะพูดว่าเราใช้ React เพื่อทำให้เราสามารถสร้าง<h2 align="justify"
+                            style="display: inline;">"ภาพ(view)"</h2>
+                  </h4>
+                </div>
+            </div>
+			<br><br><br>
+		  <div class="col-12 mt-3"> 
+                    <h4><br>จากแต่ก่อนเวลาเราจะเขียนหน้าตาของเว็บ เราก็จะทำผ่าน HTML เช่น</h4><br>
+            <form name="form1" method="post" action="">
+			  <div align="center"><img src="https://cdn.discordapp.com/attachments/904730719618744370/904730856835407932/Screenshot_2021-11-01_195002.png"
+                        alt="้html เดิม" class="box1"></div><br>
+            </form>
+		  </div>
+      </div>
+			
+            <div class="col-12 mt-3">
+                <h4 align="justify">&nbsp;&nbsp;&nbsp;&nbsp;แต่ใน React การจะสร้างหน้าตาของเว็บขึ้นมาได้นั้น มันมาจากสิ่งที่เรียกว่า
+                    Component ให้นึกภาพว่า Component เป็น block ส่วนย่อยของเว็บเราที่จะสร้างออกมา
+                    โดยเราจะเขียนโค้ดภาษา JavaScript เพื่ออธิบายหน้าตา (อาจรวมถึงพฤติกรรม) ของ block นั้นๆ
+                    แทนที่เราจะเขียนด้วย HTML จากรูปข้างบนเมื่อเขียนด้วย React จะได้</h4>
+                <br>
+				
+
+				<form name="form2" method="post" action="">
+                      <div align="center"><img src="https://cdn.discordapp.com/attachments/904730719618744370/904730809435586581/Screenshot_2021-11-01_195023.png"
+                        alt="react" class="box" width="100%">
+
+				</form>
+      </div><br>
+				<div class="col-12 mt-3">
+                    
+                    <h4>ซึ่ง ReactDOM.render() เป็นฟังก์ชันที่ตัว React จะทำการ render HTML
+                      ที่เขียนมา โดยมีจุดที่จะ render อยู่ที่ DOM ที่มี id เป็น root จากตัวอย่างนี้</h4>
+				</div>
+            </div>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<form name="form3" method="post" action="">
+            <div class="row mt-5" align="center">
+                <div class="col-5 ">
+                  <div class="card box">
+                        <div class="card-header text-center">
+                            ถ้าเรามี HTML
+                        </div>
+                        <div align="center"><img src="https://cdn.discordapp.com/attachments/904730719618744370/904751742128910406/Screenshot_2021-11-01_221949.png"
+                            alt="้html code">
+                            </div>
+                    </div>
+                </div>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <div class="col-1 d-flex align-items-center m-0" align="center">
+                    <div align="center"><img src="https://static.vecteezy.com/system/resources/previews/001/186/944/non_2x/blue-arrow-button-png.png"
+                        alt="" width="100%">
+                        </div>
+                </div>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <div class="col-5" align="center">
+                  <div class="card box">
+                        <div class="card-header text-center">
+                            ตัว React จะทำการ render หน้า HTML ทั้งหมดเป็น
+                        </div>
+                        <div align="center"><img src="https://cdn.discordapp.com/attachments/904730719618744370/904751742128910406/Screenshot_2021-11-01_221949.png"
+                            alt="้html code">
+                            </div>
+                    </div>
+                </div>
+            </div>
+			</form>
+            <!-- เช็คคำอีกที ข้างล่าง -->
+            <div class="col-12"><br><br>
+                <h4>&nbsp;&nbsp;&nbsp;&nbsp;นั่นคือเราจะไม่เขียน HTML ใน HTML กันอีกต่อไป เราจะใช้ React
+                    เขียนอยู่ในรูปแบบ JavaScript แทน ซึ่งทำให้มีภาษาใหม่เกิดขึ้นมาคือ JSX
+                    ที่ทำให้เรายัด HTML เข้าไปเขียนใน JavaScript ได้ ดังนั้น React คือการที่เราจะเขียน View ด้วยภาษา
+                    JavaScript ที่มี HTML แทรกอยู่ ก็คือ JSX นั่นเอง
+                </h4>
+                <h3 style="display: inline;">&nbsp;&nbsp;&nbsp;&nbsp;สรุปคือ <h4 style="display: inline;">
+                        สำหรับการเขียน Component นั้น
+                        ก็เหมือนกับการเขียน HTML ส่วน React ใช้สิ่งที่เรียกว่า JSX
+                        ในการแสดงผลเว็บไซต์หน้าตาจะเหมือน HTML แตกต่างตรงเราเขียนเข้าไปในไฟล์ JavaScript แทนไฟล์ HTML
+                        ทำให้เราสามารถเล่นอะไรกับมันได้มากกว่า</h4>
+                </h3>
+                <div class="row mt-4">
+                    <div class="col-3"></div>
+                    <div class="col-6">
+                      <div class="card mt-3 mb-2">
+                            <div class="card-header text-center">
+                                อีกตัวอย่างการเปรียบเทียบระหว่าง HTML กับ React
+                            </div>
+                            <img src="https://www.designil.com/wp-content/uploads/2017/07/react-jsx.webp" alt="">
+                        </div>
+                        <footer class="blockquote-footer text-right">วิธีคิดของ React คือ ทุกอย่างเป็น Component
+                        </footer>
+                    </div>
+                    <div class="col-3"></div>
+                </div>
+            </div>
+<!-- </div> -->
+
+        <br><br id="before"><br>
+        <!-- <div class="bgwhite"> -->
+        <!-- ตรงนี้ค่อยมาคิดว่าจะเพพิ่ม ข้อมูล js มั้ย -->
+        <div class="row mt-5">
+            <div class="col-12 d-flex align-items-center text-center justify-content-center">
+                <h2>ถ้าเราอยากเขียน React <br> เราต้องเตรียมตัวและมีพื้นฐานยังไงบ้าง</h2>
+            </div>
+            <hr>
+            <div class="col-12">
+                <div class="row mt-4">
+                    <div class="col-12 d-flex">
+                        <div class="card" style="width: 100%; margin: 1%;">
+                            <div class="card-header text-center">
+                                ES6 (ECMAScript 6)
+                            </div>
+                            <div class="card-body">
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;มันคือภาษา JavaScript
+                                เวอร์ชันใหม่ที่มีฟีเจอร์มากมาย เช่น
+                                ประกาศฟังก์ชันโดยใช้ลูกศร (=>), ประกาศตัวแปรใน block scope ด้วย let, Class และอื่นๆ
+                                ซึ่งใน React สาเหตุที่ใช้ ES6 เพราะฟีเจอร์ใหม่ๆ
+                                มันช่วยให้เราเขียนโค้ดได้ง่ายขึ้น และสวยกว่าเดิมมาก เทียบกับเขียน JavaScript เดิมๆ
+                            </div>
+                        </div>
+                        <div class="card" style="width: 100%; margin: 1%;">
+                            <div class="card-header text-center">
+                                Babel
+                            </div>
+                            <div class="card-body">
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;สืบเนื่องจาก ES6 เนี่ย browser
+                                บางตัวยังไม่รองรับ ถ้าเราอยากเขียน ES6
+                                เราจะต้องแปลงให้เป็น JavaScript ที่ browser รองรับได้ ซึ่ง Babel
+                                เป็นคนทำส่วนนี้ให้
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 d-flex">
+
+                        <div class="card" style="width: 100%; margin: 1%;">
+                            <div class="card-header text-center">
+                                Node.js
+                            </div>
+                            <div class="card-body">
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Cross Platform Runtime Environment
+                                สำหรับฝั่ง Server และเป็น Open Source
+                                ซึ่งเขียนด้วยภาษา JavaScript สรุปรวมๆ NodeJS ก็คือ Platform ตัวหนึ่งที่เขียนด้วย
+                                JavaScript สำหรับเป็น Web Server
+                            </div>
+                        </div>
+                        <div class="card" style="width: 100%; margin: 1%;">
+                            <div class="card-header text-center">
+                                Command Line
+                            </div>
+                            <div class="card-body">
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;สามารถใช้ Command Line ได้ พอรู้จัก NPM,
+                                Yarn เป็นต้น
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="card" style="margin: 1%;">
+                            <div class="card-header text-center">
+                                Webpack
+                            </div>
+                            <div class="card-body">
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;เป็นเครื่องมือสำหรับช่วยแปลงโค้ด ES6
+                                เป็น ES5 หรือเวลาเราเขียนโค้ดหลายๆไฟล์ เราอาจจะประสบปัญหาหลายๆอย่าง เช่น เราจะ include
+                                script ไหนก่อนดี รวมถึงพอไฟล์เยอะๆ มันก็จะโหลดช้า ตัว Webpack
+                                ก็จะมัดรวมพวกนี้ให้เป็นไฟล์เดียว พร้อมทั้งจัดลำดับการ include ให้เลย
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <!-- <div class="card mb-3" style="max-width: 540px; margin: 1%;">
+                            <div class="row g-0">
+                                <div class="col-7">
+                                    <img src="https://www.designil.com/wp-content/uploads/2017/07/react-concept-designil.webp"
+                                        class="img-fluid rounded-start" alt="..." width="100%" height>
+                                </div>
+                                <div class="col-5">
+                                    <div class="card-body">
+                                        <h5 class="card-title">คอนเซปต์</h5>
+                                        <hr style="width: 100%;">
+                                        <li>Component – ส่วนต่าง ๆ ในเว็บเราจะมองเป็น Component</li>
+                                        <li>State – ข้อมูลที่อยู่ใน Component แต่ละชิ้น เราเรียกว่า State</li>
+                                        <li>Props – ข้อมูลที่ถูกส่งต่อจาก Component ชั้นบนลงไปชั้นล่าง เราเรียกว่า Props
+                                            (Properties)</li>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> -->
+                        <div class="card" style="margin: 1%;">
+                            <div class="card-header text-center">
+                                คอนเซปต์ที่เราต้องรู้เพื่อเขียน React หลักๆ มี 3 อย่าง
+                            </div>
+                            <!-- <div class="card-body"></div> -->
+                            <div class="row">
+                                <div class="col-6">
+                                    <!-- <img src="https://www.designil.com/wp-content/uploads/2017/07/react-concept-designil.webp" alt=""> -->
+                                </div>
+                                <div class="col-6">
+                                    <li>Component – ส่วนต่าง ๆ ในเว็บเราจะมองเป็น Component</li>
+                                    <li>State – ข้อมูลที่อยู่ใน Component แต่ละชิ้น เราเรียกว่า State</li>
+                                    <li>Props – ข้อมูลที่ถูกส่งต่อจาก Component ชั้นบนลงไปชั้นล่าง เราเรียกว่า Props
+                                        (Properties)</li>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="card" style="width: 100%;">
+                        <div class="card-header text-lg-center">
+    
+                        </div>
+                        <div class="card-body">
+                            <blockquote class="blockquote mb-0">
+                                <li>ความรู้พื้นฐานที่ควรรู้</li><br>
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-3 text-center">
+                                            <div class="card border-primary shadow-lg circle"
+                                                style="padding: 15%;width: 80%; height:100%">
+                                                JavaScript
+                                            </div>
+                                        </div>
+                                        <div class="col-3 text-center">
+                                            <div class="card border-primary shadow-lg circle"
+                                                style="padding: 15%;width: 80%; height:100%">
+                                                Node.js
+                                            </div>
+                                        </div>
+                                        <div class="col-3 text-center">
+                                            <div class="card border-primary shadow-lg circle"
+                                                style="padding: 15%;width: 80%; height:100%">
+                                                ES6/ES7
+                                            </div>
+                                        </div>
+                                        <div class="col-3 text-center">
+                                            <div class="card border-primary shadow-lg circle"
+                                                style="padding: 15%;width: 80%; height:100%">
+                                                Command Line
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </blockquote>
+                        </div>
+                    </div> -->
+        <!-- </div> -->
+        <br><br><br id="friend"><br><br>
+        <div class="row">
+            <div class="col-12 text-center mb-3">
+                <h2>สิ่งที่ควรรู้สำหรับการเขียน React</h2>
+                <hr>
+            </div>
+            <div class="col-6 bg-light text-center d-flex align-items-center justify-content-center">
+                <h3>Component คืออะไร ?</h3>
+            </div>
+            <div class="col-6 p-5">
+                <h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ถ้าพูดถึงว่าเราจะใช้ React เพื่อเขียนอะไร
+                    คำตอบคือเรากำลังจะเขียน Component<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;แนวคิดของ Component คือการเขียนองค์ประกอบของ View
+                    ให้ย่อยที่สุดเท่าที่จะย่อยได้ และเน้นให้ Reusable
+                    ได้เยอะ</h4>
+            </div>
+            <div class="col-6 p-5 d-flex align-items-center justify-content-center">
+                <h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ตัวอย่างเช่น ถ้าเราสามารถเขียน Component ของ
+                    Searchbox ไว้เพียงครั้งเดียว และเมื่อมีใครอยากใช้ Searchbox
+                    ก็แค่ไปดึงมาใช้ ถ้าจะแก้ก็แก้ที่ Searchbox Component อันเดียว
+                    ที่เหลือจะเปลี่ยนตาม ซึ่งการแบ่ง Component จะมีข้อดี คือ <br><br>
+                    <ul>
+                        <li>มีการแบ่งส่วนกันเขียน แยกส่วนกันชัดเจน</li><br>
+                        <li>สามารถนำ component ไปใช้ที่อื่นได้ หากต้องการอะไรที่คล้ายๆ กัน</li><br>
+                        <li>แก้ไขง่าย</li>
+                    </ul>
+                </h4>
+            </div>
+            <!-- <div class="col-6 bg-light"> -->
+            <!-- <div class="row bg-light"> -->
+            <div class="col-2 p-5 bg-light d-flex align-items-center text-center">
+                <mark>
+                    <h5>ตัวอย่าง จาก Facebook</h5>
+                </mark>
+                <img src="https://cdn-images-1.medium.com/max/1600/1*m2k00x1C__Nbkd2tyemyqw.png" alt="" width="100%">
+            </div>
+            <div class="col-4 p-5 bg-light">
+                <h5>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;เราสามารถแบ่งหน้าจอนี้ออกมาได้ 5 Component ด้วยกัน
+                    คือ <br><br>
+                    1. ProductRow (สีแดง): แสดงชื่อสินค้า และราคา<br><br>
+                    2. ProductCategoryRow (สีฟ้าอ่อน): แสดงชื่อประเภทสินค้า<br><br>
+                    3. ProductTable (สีเขียว): แสดงรายการสินค้า (ซึ่งจะประกอบด้วย ProductCategoryRow +
+                    ProductRow)<br><br>
+                    4. SearchBar (สีน้ำเงิน): แสดง Search Box ที่ filter ข้อมูลตาราง พร้อมปุ่ม Option
+                    ว่าจะให้โชว์เฉพาะสินค้าที่มีใน stock <br><br>
+                    5. FilterableProductTable (สีส้ม): แสดงข้อมูลสินค้า ที่เราสามารถ filter ข้อมูลในตารางได้
+                    ด้วยการพิมพ์ใน search box (เป็นตัวครอบทุกอันทั้งหมด)<br><br>
+                </h5>
+            </div>
+            <div class="col-12 bg-light p-5 text-center">
+                <h4>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;โดย Component ใน React นั้นสามารถเขียนได้หลายแบบมาก
+                    แต่แบบที่ใช้กันเยอะและเป็นมาตรฐานสำหรับมือใหม่
+                    คือ การ extends คลาส Component ของ React มานั่นเอง
+                </h4><br>
+                <img src="https://cdn.discordapp.com/attachments/904730719618744370/904947080898953216/Screenshot_2021-11-02_111549.png"
+                    alt="" width="50%" class="box">
+                <h4><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;เวลาข้างนอกจะเอาไปใช้ ก็จะใช้เหมือนเรามี tag HTML
+                    นั้นๆมาให้ใช้เลย
+                </h4><br>
+                <img src="https://cdn.discordapp.com/attachments/904730719618744370/904951112799490058/Screenshot_2021-11-02_113155.png"
+                    alt="" width="50%" class="box">
+            </div>
+            <div class="col-6 bg-light text-center d-flex align-items-center justify-content-center">
+                <h3>Props กับ State คืออะไร ?</h3>
+            </div>
+            <div class="col-6 p-5">
+                <h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ให้นึกถึง HTML ธรรมดา อย่างใน <mark>tag a</mark>
+                    เราสามารถใช้
+                    href เพื่อบอกได้ว่ากดลิ้งแล้วจะไปไหน โดยการเขียนต่อไปใน <mark>tag a</mark> เช่น</h4><br>
+                <img src="https://cdn.discordapp.com/attachments/904730719618744370/904954614095441930/Screenshot_2021-11-02_114623.png"
+                    alt="" width="100%" class="box">
+            </div>
+            <div class="col-6 p-5 d-flex align-items-center justify-content-center">
+                <h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ซึ่งใน React การทำ href ก็ทำได้เหมือนกัน
+                    โดยเราจะเรียกว่า props นั่นเอง (มาจาก properties) props เป็นจุดที่ทำให้ React component นึง สามารถ
+                    <mark>pass</mark> ข้อมูลต่างๆ ไปอีก component นึงได้ <br><br>
+                    จากรูปจะเห็นได้ว่า
+                    <ul><br>
+                        <li>ParentComponent render ChildComponent โดยมี props message=“Hello World” ไปด้วย</li><br>
+                        <li>ChildComponent จะ render คำว่า And then I said, “Hello World” ให้ เพราะ ParentComponent
+                            ส่งคำว่า Hello World ผ่าน props ที่ชื่อ message นั่นเอง</li>
+                    </ul>
+                </h4>
+            </div>
+            <div class="col-6 p-5 d-flex align-items-center justify-content-center bg-light">
+                <img src="https://cdn.discordapp.com/attachments/904730719618744370/904957010259370025/Screenshot_2021-11-02_115552.png"
+                    alt="" width="100%" class="box">
+            </div>
+            <div class="col-12 bg-light p-5">
+                <h4 style="display: inline;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ด้วยเหตุนี้ ทำให้ React
+                    นั้นมีการไหลของข้อมูลเป็นการไหลไปทางเดียว คือ จากพ่อสู่ลูก นอกจากนี้ props
+                    ไม่จำเป็นต้องเป็นแค่ค่าตัวเลข หรือ string ธรรมดา มันอาจจะเป็น Object ทั้งก้อน หรือฟังก์ชันก็ได้
+                    ซึ่งแน่นอนว่ามีแค่ props คงไม่พอ บาง Component ก็อยากจะต้องมีการสร้าง data อะไรบางอย่าง
+                    ไว้ใช้ในตัวมันเอง หรือส่งไปให้ลูกๆ เช่นกัน และนี่ทำให้ </h4>
+                <h2 style="display: inline;">"state"</h2>
+                <h4 style="display: inline;"> เข้ามามีบทบาท</h4><br><br>
+                <h1 style="display: inline;">&nbsp;&nbsp;&nbsp;&nbsp;state</h1>
+                <h4 style="display: inline;"> นั้นเสมือนเป็น data ที่มีการใช้แค่ภายใน Component นั้นๆ อารมณ์คล้ายกับเป็น
+                    local variable ซึ่งการกระทำแก้ไขข้อมูลของ state นั้นจะทำผ่านฟังก์ชัน setState ของ React
+                    และ state นั้นจะเป็น JavaScript object ธรรมดา
+                    ดังนั้นหน้าตามันจะเป็นยังไงขึ้นอยู่กับว่าเราจะสร้างสรรค์ออกมายังไง
+                </h4><br><br>
+                <img src="https://cdn.discordapp.com/attachments/904730719618744370/904964566356738048/Screenshot_2021-11-02_122555.png"
+                    alt="" height="30%" class="box"><br><br>
+                <!-- <div class="col-6 p-5 bg-light">
+                <img src="https://cdn.discordapp.com/attachments/904730719618744370/904964566356738048/Screenshot_2021-11-02_122555.png"
+                    alt="" width="90%" class="box">
+            </div> -->
+                <h4>จากรูปข้างบนนี้ ถ้ากดปุ่ม ก็จะมีการ set state ให้มีค่าการถูกกด (clicked) เป็น true</h4><br>
+                <h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ส่วนรูปข้างล่างนี้ เป็นตัวอย่างแสดงให้เห็นภาพว่า
+                    state เอาไปใช้ได้ยังไง โดยจะทำตัว CounterComponent
+                    ที่จะมีปุ่มกดที่จะเพิ่มเลขได้ และค่าเลขปัจจุบันก็จะถูกแสดงออกมา</h4><br>
+                <div class="row pb-5">
+                    <div class="col-6 d-flex align-items-center">
+                        <img src="https://cdn.discordapp.com/attachments/904730719618744370/904969663778283581/Screenshot_2021-11-02_124600.png"
+                            alt="" width="100%" class="box">
+                    </div>
+                    <div class="col-6 d-flex align-items-center">
+                        <h4>
+                            <mark>ลำดับการทำงาน</mark><br><br>
+                            <ul>
+                                <li>constructor จะใส่ค่า state ให้มี count เป็น 0</li><br>
+                                <li>ประกาศฟังก์ชัน handleClick ที่จะรอ event การกด หากมีการกด จะ set state ใหม่โดยให้ค่า
+                                    count เพิ่มขึ้นจากเดิมไป 1</li><br>
+                                <li>render() จะ render component มา โดยจะแสดงจำนวนเลขปัจจุบัน และมีปุ่ม</li><br>
+                                <li>โดยเลขปัจจุบัน จะแสดงผ่านตัวแปร this.state.count (ถ้าไล่ดีๆ มันก็คือไล่ JavaScript
+                                    object ธรรมดาเลย ไม่มีอะไรแปลก)</li><br>
+                                <li>และปุ่มจะผูกกับฟังก์ชัน handleClick ผ่าน onClick</li><br>
+                                <li>ดังนั้นเมื่อกดปุ่ม ก็จะเรียกฟังก์ชัน handleClick ที่จะเพิ่มค่า count ไป 1 ผ่านการ
+                                    set state</li><br>
+                                <li>และ view จะอัพเดตหน้าตา เมื่อ state เปลี่ยน</li>
+                            </ul>
+                        </h4>
+                    </div>
+                </div>
+
+                <!-- <div class="card text-lg-center border-primary m-3">
+                    <div class="card-header">
+                        <h3>สรุป</h3>
+                    </div>
+                    <div class="card-body">
+                        <h4>
+                            <mark>props มาจากด้านบน,</mark> ส่วน state ใช้ภายใน
+                        </h4>
+                    </div>
+                </div>
+                <div class="card text-lg-center border-danger m-3">
+                    <div class="card-header">
+                        <h3>แล้วเราสามารถโยน state เข้า props ของ component ลูกได้มั้ย ?</h3>
+                    </div>
+                    <div class="card-body">
+                        <h4>
+                            <h4><u>ตอบ</u> : ได้ แต่ตัวลูกไม่สามารถแก้ไข state ของตัวพ่อได้ เพราะมันเป็นแค่ props
+                                ตัวนึง</h4>
+                        </h4>
+                    </div>
+                </div><br> -->
+                <h4>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;แม้ว่า React จะมี state
+                    ให้เราเพื่อที่เราจะโยนของลงไปให้
+                    Component ต่างๆ แล้ว
+                    แต่ถ้าแอพเริ่มใหญ่ขึ้นการจัดการ state ก็จะยากขึ้นและงงมากขึ้น จึงมี architecture ต่างๆ
+                    มาช่วยให้เราจัดการ state ได้ง่ายขึ้น เช่น Flux, Redux, MobX เป็นต้น
+                </h4><br><br>
+            </div>
+            <div class="col-6 p-5 d-flex align-items-center justify-content-center">
+                <h2>Flux คืออะไร ?</h2>
+            </div>
+            <div class="col-6 p-5 bg-light">
+                <h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;คือ Data Flow Pattern
+                    เเบบหนึ่งที่ถูกเเบบโดยทีมผู้พัฒนา
+                    Facebook โดยเจ้า Flux
+                    ออกเเบบมาเพื่อใช้เเก้ไขปัญหาเรื่องความซับซ้อนในการเขียนโค้ด Flux เเละในองค์กรต่าง ๆ มักจะหยิบ Flux
+                    มาใช้ควบคู่กับ React ค่อนข้างบ่อยมาก <br><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;โดย Flux
+                    นั้นออกเเบบมาเพื่อเเก้ไขปัญหาของเจ้าใหญ่อย่าง MVC
+                    framework เนื่องจากปัญหาของ MVC นั้นคือ กรณีที่ Project เริ่มใหญ่ขึ้น ความซับซ้อนก็เริ่มมากขึ้น
+                    ส่วนของ Model เยอะตามการเข้ามาเเก้ไขก็ลำบากขึ้น ดังนั้นเเล้ว Flux จึงออกเเบบให้กลายเป็น
+                    Unidirectional นั่นเอง</h4>
+            </div>
+            <div class="col-6 p-5 bg-light">
+                <h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;คือ State Management (ตัวจัดการ State) นั่นเอง
+                    และมันก็ไม่จำเป็นว่าจะต้องใช้กับ React เท่านั้น มันเป็น Concept ฉะนั้น
+                    มันสามารถประยุกต์ใช้ได้หมด เช่น Angular หรือ Vue
+                </h4>
+            </div>
+            <div class="col-6 p-5 d-flex align-items-center justify-content-center">
+                <h2>Redux คืออะไร ?</h2>
+            </div>
+            <div class="col-6 p-5 d-flex align-items-center justify-content-center">
+                <h2>MobX คืออะไร ?</h2>
+            </div>
+            <div class="col-6 p-5 bg-light">
+                <h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;เป็นหลักการที่ใช้ Observable Pattern ในการเก็บ State
+                    แทนการ Pass จาก Root ลงไปยัง Child Component เหมือน Flux หรือ Redux
+                </h4>
+            </div>
+            <div class="col-12 text-center mt-5"><br><br>
+                <h1>Stateless Component คืออะไร ?</h1>
+                <hr><br>
+            </div>
+            <div class="col-12">
+                <h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Stateless Component คือ Component ที่ไม่มีการใช้
+                    State ใดๆ ใช้แต่ props เท่านั้น และเขียนมันออกมาในลักษณะการเขียน function ที่ return HTML ไป
+                </h4><br>
+                <img src="https://cdn.discordapp.com/attachments/904730719618744370/905017254297600030/Screenshot_2021-11-02_155441.png"
+                    alt="" class="box" width="auto" height="80%"><br><br>
+                <h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ซึ่งการเขียน Stateless Component
+                    เหมาะสำหรับกรณีที่เราไม่ต้องการ state เลย ไม่ต้องทำ lifecycle hook และการทำให้กลายเป็น
+                    Presentational Component ของจริง คือมีหน้าที่โชว์อย่างเดียว เราจะรู้เลยว่าถ้า logic จะมีปัญหา
+                    มันก็จะมาจากที่อื่น ไม่น่าจะมาจากที่นี่ เพราะมันโชว์เป็นอย่างเดียว (หรือก่อให้เกิดการเรียก action
+                    อย่างเดียว หากส่ง function ลงมา)</h4>
+            </div>
+
+
+            <!-- </div> -->
+            <!-- </div> -->
+        </div>
+        <br><br><br id="cycle"><br><br>
+        <div class="row">
+            <div class="col-12 text-center mb-3 mt-5">
+                <h2>React Lifecycle</h2>
+                <hr>
+            </div>
+            <div class="col-12">
+                <h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;การเกิดและดับไปของ Component ใน React
+                    นั้นเราจะเรียกมันว่า Lifecycle ซึ่งถ้าเราเข้าใจส่วนนี้ได้
+                    เราก็สามารถแทรกโค้ดเพื่อให้ถูกรันเฉพาะเมื่อเกิดในจังหวะต่างๆใน cycle ดังกล่าวได้
+                    โดยการแทรกโค้ดนั้น เพียงเขียนฟังก์ชันตามชื่อที่มีอยู่ใน Lifecycle ใน component นั้นเป็นอันจบ
+                </h4><br>
+            </div>
+            <div class="col-12 text-center">
+                <!-- <div class="card" style="width: 50%;">
+                    <div class="card-header">
+                        React Lifecycle
+                    </div>
+                    <div class="card-body">
+                        <img src="" alt="">
+                    </div>
+                </div> -->
+                <img src="https://cdn-images-1.medium.com/max/1600/1*mkeF_H0KllFDOHcQlxmjcQ.png" alt="" class="box"
+                    width="50%">
+            </div>
+            <div class="col-12 mt-4">
+                <h4>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;จากรูปข้างบนนี้ อธิบายได้ว่า
+
+                    <ol><br>
+                        <li>ครั้งแรก component จะโดน render ผ่านฟังก์ชัน ReactDOM.render() ที่จะ render component
+                            ทั้งหมด
+                            หากใน component มี component ย่อย ก็จะ render อันย่อยด้วย ไล่ render ไป</li><br>
+                        <li>จังหวะแรก จะมีการ getDefaultProps() ที่จะดึงค่า props ที่เป็น default มาก่อนทั้งหมด
+                        </li><br>
+                        <li>และก็จะ getDefaultState() เหมือนกัน</li><br>
+                        <li>ต่อมาจะเป็นจุดสำคัญ คือในจังหวะที่ตัว DOM ที่กำลังจะ render มันจะถูกแปะใน DOM หลัก
+                            มันคือจังหวะของ componentWillMount() ซึ่งเราสามารถมา hook cycle
+                            นี้เพื่อทำอะไรบางอย่างได้
+                            เช่น เริ่มยิง AJAX ขอข้อมูลจาก API เป็นต้น</li><br>
+                        <li>ถัดจากนั้น เมื่อ DOM ถูกแปะใน DOM หลักแล้ว ก็จะทำการ render() ตัว DOM ขึ้นมา
+                            ตามที่เราเขียนไป
+                        </li><br>
+                        <li>เมื่อ render() เสร็จ ตอนนี้ DOM นั้นก็จะแปะอยู่ในเว็บอย่างสมบูรณ์แล้ว ก็จะเป็นจังหวะของ
+                            componentDidMount() ที่เราสามารถแตะต้อง DOM ที่เราเขียนได้แล้ว เช่น หากเราอยากใช้ library
+                            ของ
+                            jQuery เราก็มาใช้มันในนี้เพราะ DOM จริงๆ มันถือกำเนิดแล้ว (ก่อนหน้านั้น DOM
+                            มันกำลังจะเกิดเฉยๆ)</li><br>
+                        <li>หลังจากนั้น อาจจะเกิดเหตุการณ์เช่น props จากด้านบนเปลี่ยนค่า หรือเปลี่ยน props ผ่าน
+                            setProps()
+                            จังหวะที่ props เปลี่ยนนั้นก็จะเป็นช่วงของ componentWillReceiveProps(nextProps)
+                            คือเป็นจังหวะที่
+                            Component จะได้รับ props อันใหม่</li><br>
+                        <li>หรือหากไม่เกิดการเซ็ต props ใหม่ แต่เกิดการเซ็ต state ผ่าน setState()
+                            จังหวะนั้นก็จะกระโดดมาที่
+                            shouldComponentUpdate(nextProps, nextState) ส่วนนี้เป็นส่วนที่สำคัญมาก เพราะว่า หาก props
+                            เปลี่ยนหรือ state เปลี่ยน มันจะโดนมาอยู่ที่จุดนี้ ซึ่งเป็นจุดที่ Virtual DOM ของ React
+                            มีบทบาทมาก และความเร็วของมันเกิดจากจุดนี้ คือมันจะประเมินว่า component
+                            นี้ต้องมีการอัพเดตหน้า view หรือไม่ โดยมีการใช้ Virtual DOM ในการดู</li><br>
+                        <li>หาก Virtual DOM ตัดสินใจจะอัพเดต view ละ ก็จะไปที่ componentWillUpdate(nextProps, nextState)
+                            เลย
+                        </li><br>
+                        <li>และก็จะสั่ง render() อีกครั้ง เพื่อ rerender ใหม่</li><br>
+                        <li>และไปที่ componentDidUpdate(prevProps, prevState) เพื่อบอกว่าการอัพเดต component เสร็จแล้ว
+                        </li><br>
+                        <li>แล้วก็จะกลับไปสู่จุดรอ และเป็นวังวนไป หากมี state หรือ props เปลี่ยน ก็จะไปทำตามข้อ 7
+                            หรือ 8
+                            ใหม่</li><br>
+                        <li>หาก component นี้เกิดต้องจากลา ก็จะไปสู่ componentWillUnmount() ที่จะทำการ unmount DOM
+                            นี้ออกจาก DOM หลักออกไป แล้วก็ตายจากไป</li><br>
+                    </ol>
+                </h4>
+                <h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;การทำความรู้จักว่า Lifecycle
+                    มีอะไรบ้างนั้นช่วยให้เราสามารถเขียนโค้ดไป hook (เกาะ, เกี่ยว) กับช่วง
+                    Lifecycle ที่ต้องการได้ เช่น อยากจะยิง API ขอข้อมูล ก็ไปยิงตั้งแต่จังหวะที่จะโดน mount เลยสิ
+                    (componentWillMount()) หรือจะต้อง init Google Map ก็ต้องรอให้ DOM จริงๆ เกิดขึ้นก่อน ถึงจะ init ได้
+                    (componentDidMount()) อะไรแบบนี้ หรือบางเคส เราตัดสินใจแทน Virtual DOM ได้ว่า ถ้าอีค่านี้เปลี่ยน
+                    ยังไง view ก็ต้องเปลี่ยน ก็ไปเขียน hook shouldComponentUpdate() แล้วตัดสินใจให้เลยก็ได้ ก็จะ
+                    optimize ประสิทธิภาพไปได้อีก</h4>
+                <div class="card" style="width: 30%;">
+                    <div class="card-header text-center">
+                        ตัวอย่างการทำ lifecycle hook แบบคร่าวๆ
+                    </div>
+                    <div class="card-img-bottom">
+                        <img src="https://cdn.discordapp.com/attachments/904730719618744370/905031910873530408/Screenshot_2021-11-02_165329.png"
+                            alt="" width="100%">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br><br><br id="dom"><br><br>
+        <div class="row">
+            <div class="col-12 text-center mt-3">
+                <h2>สมองของ React ทำมาจากอะไร</h2>
+                <hr><br>
+            </div>
+            <div class="col-12">
+                <h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;สงสัยกันไหม ว่าทำไม React ถึงทำงานได้เร็วมากๆ
+                    นั่นก็เพราะตัว React
+                    นั้นมีการเปรียบเทียบการเปลี่ยนแปลงของ View จากการใช้ Virtual DOM</h4>
+                <h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;อย่างที่ทราบกันว่า เวลาเรามี HTML มา Browser ก็จะ
+                    render มันออกมาให้เรา แต่ว่าตัว element ต่างๆ ใน HTML นั้นสามารถถูก access ได้เพื่อทำอะไรบางอย่าง
+                    เช่น CSS มา access เพื่อ styling ให้มัน, JavaScript มา access เพื่อแปะ event ให้มัน ดังนั้น ตัว
+                    Browser มันจะไม่ได้แค่ render HTML ออกมาเป็นหน้าตาเฉยๆ แต่ยังแปลงตัว HTML ที่เราเขียนเนี่ย
+                    ไปเป็นต้นไม้ต้นนึง ที่เราเรียกมันว่า DOM (Document Object Model) Tree</h4><br>
+                <img src="https://cdn-images-1.medium.com/max/1600/1*Z32YHoZNEgAHCaozilfDIA.png" alt=""><br>
+                <h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<mark>ตัว DOM ไม่ได้ทำงานเรร็วเสมอไปทุกครั้ง </mark> สมมติถ้าหน้า View เกิดมีการอัพเดต เช่น มี element
+                    โดนถอนออก หรือมีการแก้ค่าข้างใน DOM ก็จะต้องแก้ต้นไม้ใน node ที่ต้องการอัพเดต แม้ว่า DOM มันจะหา
+                    node นั้นได้เร็วเพราะเป็นต้นไม้ แต่หากมีการอัพเดตแล้ว node นั้นมีลูกเยอะๆ ก็จะส่งผลกระทบหนักมาก
+                    ลองนึกภาพว่าถ้าขยับ node นึง 10 pixel แต่จริงๆ แล้วทุก node ลูกนั้นๆ ต้องขยับตามด้วย และดันมีเป็นพันๆ
+                    node แน่นอนว่าจะส่งผลให้การทำงานมันจะช้ามาก เพราะต้องลงไปไล่แก้ <br><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;อีกทั้ง DOM นั้นก็ไม่เก่งเรื่องการสร้าง Dynamic
+                    View ที่มีการปรับเปลี่ยนค่าใน DOM ตลอดด้วย ทำให้เมื่อหน้า View เริ่มมีความ dynamic สูงขึ้น
+                    โดยเฉพาะใน SPA ทั้งหลาย DOM จึงส่อถึงปัญหาของประสิทธิภาพอย่างชัดเจนมากขึ้น ด้วยปัญหาเหล่านี้</h4><br>
+            </div>
+        </div>
+        <br><br><br id="..."><br><br>
+    </div>
+</body>
+
+</html>
+fernjoop
